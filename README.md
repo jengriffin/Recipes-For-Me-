@@ -2,7 +2,7 @@
 
 # Date: 8/10/2022
 
-## By: Jennifer Griffin [GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-12/)/ Cedric Mun [GitHub](https://github.com/Aonmonomer)[LinkedIn](https://www.linkedin.com/in/cedricmun/)/ Josh Langner [GitHub](https://github.com/jlangner87) [LinkedIn](https://www.linkedin.com/in/josh-langner/)/ Jackson McHugh[GitHub](https://github.com/Jacksonmchugh) [LinkedIn](https://www.linkedin.com/in/jackson-mchugh/)
+## By: Jennifer Griffin [GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-12/)/ Cedric Mun [GitHub](https://github.com/Aonmonomer)[LinkedIn](https://www.linkedin.com/in/cedricmun/)/ Josh Langner [GitHub](https://github.com/jlangner87) [LinkedIn](https://www.linkedin.com/in/josh-langner/)/ Jackson McHugh [GitHub](https://github.com/Jacksonmchugh) [LinkedIn](https://www.linkedin.com/in/jackson-mchugh/)
 
 ---
 
