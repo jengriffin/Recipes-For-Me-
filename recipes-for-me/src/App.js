@@ -1,14 +1,19 @@
-import logo from './logo.svg'
-import './App.css'
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img />
-        <p></p>
-        <a></a>
+    <div>
+      <header>
+        <Nav />
       </header>
+      <main>
+        <Routes>
+          <Route />
+          <Route />
+          <Route />
+          <Route />
+          <Route />
+          <Route />
+        </Routes>
+      </main>
     </div>
   )
 }
