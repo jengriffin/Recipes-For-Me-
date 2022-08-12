@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Nav from './components/Nav'
 import RecipeForm from './pages/RecipesForm'
 import { Route, Routes } from 'react-router-dom'
+
 const App = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route />
           <Route />
+
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
         </Routes>
