@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
+;<h1>Register</h1>
+
 const Register = () => {
   const [formValues, setFormValues] = useState({
     name: '',

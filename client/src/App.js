@@ -1,3 +1,8 @@
+import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router'
+import Nav from './components/Nav'
+import Register from './pages/Register'
+
 const App = () => {
   return (
     <div>
@@ -11,7 +16,7 @@ const App = () => {
           <Route />
           <Route />
           <Route />
-          <Route />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
     </div>
