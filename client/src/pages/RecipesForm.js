@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+
 import { useState, useEffect } from 'react'
 
 function RecipeForm() {
@@ -18,7 +17,7 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get('http://localhost:3001/recipeform')
+        let res = await axios.get('http://localhost:3000/recipeform')
         console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {
