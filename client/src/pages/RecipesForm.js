@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 
 import { useState, useEffect } from 'react'
-
+const BASE_URL = ''
 function RecipeForm() {
   const initialState = {
     title: '',
@@ -17,11 +17,11 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get('http://localhost:3000/recipeform')
-        console.log(res.data)
+        let res = await axios.get(`${BASE_URL}/recipeform`)
+        // console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {
-        console.log(eer)
+        // console.log(eer)
       }
     }
     getRecipe()
@@ -33,9 +33,9 @@ function RecipeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
+    // console.log(formState)
     let res = await axios.post('http://localhost:3001/recipeform', formState)
-    console.log(res)
+    // console.log(res)
     setFormState(initialState)
   }
 

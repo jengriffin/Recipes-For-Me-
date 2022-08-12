@@ -12,11 +12,11 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          {/* <Route />
+          <Route path="/home" element={<Home />} />
           <Route />
           <Route />
           <Route />
-          <Route /> */}
+          <Route />
           <Route path="/recipeform" element={<RecipeForm />} />
         </Routes>
       </main>
