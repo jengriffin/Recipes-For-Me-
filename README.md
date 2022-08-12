@@ -37,6 +37,13 @@
 
 ---
 
+## **_Getting Started_**
+
+Fork and Clone
+npm i
+
+---
+
 ## **_Credits_**
 
 ## Project progression: [trello.com](https://trello.com/b/DfpSJLep/pern-application)
