@@ -1,4 +1,3 @@
-
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -17,11 +16,10 @@ const App = () => {
           {/* <Route />
           <Route />
           <Route />
-          <Route />
+          <Route />*/}
 
-          <Route /> */}
+          <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
-
         </Routes>
       </main>
     </div>
