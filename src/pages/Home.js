@@ -12,7 +12,7 @@ const Home = () => {
         <SideNav />
       </div>
       <div>
-        <img src="" alt="background" />
+        <img src="https://gdurl.com/nZEd" alt="background" />
       </div>
       <div>
         {/* <Link to="/">Sign In</Link>

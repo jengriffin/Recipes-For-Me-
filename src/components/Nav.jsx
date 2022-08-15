@@ -1,20 +1,15 @@
 import { NavLink } from 'react-router-dom'
+import '../sideNav.css'
 
 const Nav =()=>{
     return(
      <div className='navbar_container'>
-     <nav>
-
-        <div>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/recipeform'>Add a Recipe</NavLink>
+        <NavLink className='nav_links' to='/'>Home</NavLink>
+        <NavLink className='nav_links' to='/feed'>Recipes</NavLink>
         <img className='header_logo' src='https://gdurl.com/R93j'/>
-        <NavLink to='/signin'>Sign In</NavLink>
-        <NavLink to='/register'>Register</NavLink>
-        <NavLink to='/feed'>Recipes</NavLink>
+        <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
+        <NavLink className='nav_links' to='/register'>Register</NavLink>
 
-        </div>
-     </nav>
      </div>
     )
 }
