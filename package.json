@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "recipes-for-me",
+=======
+  "name": "client",
+>>>>>>> d98475f21dce76388d0fcc7429c79fdbae7fb5f7
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
+=======
+    "start": "react-scripts start",
+>>>>>>> d98475f21dce76388d0fcc7429c79fdbae7fb5f7
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
