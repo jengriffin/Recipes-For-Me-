@@ -4,8 +4,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { BASE_URL } from '../globals'
 
-// const BASE_URL = 'https://recipes-for-me-api.herokuapp.com/'
-
 const Recipes = (props) => {
   let navigate = useNavigate()
 
@@ -13,7 +11,7 @@ const Recipes = (props) => {
 
   const showRecipes = (recipe) => {
     console.log(recipe.id)
-    navigate(`${recipe.id}`)
+    navigate(`/recipes/${recipe.id}`)
   }
 
   useEffect(() => {
