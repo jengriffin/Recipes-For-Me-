@@ -26,7 +26,7 @@ const Recipes = (props) => {
   return (
     <div className="recipe-grid">
       {recipe
-        ? recipe.map((recipes) => (
+        ? recipe.map((recipe) => (
             <div
               className="recipe-card"
               onClick={() => showRecipes(recipe)}
