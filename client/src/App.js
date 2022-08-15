@@ -7,7 +7,7 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import About from './pages/About'
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
+import Recipes from './pages/Recipeslist'
 
 const App = () => {
   return (
@@ -17,9 +17,9 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route />
+          <Route path="/feed" element={<Recipes />} />
           <Route />
 
           <Route path="/register" element={<Register />} />
