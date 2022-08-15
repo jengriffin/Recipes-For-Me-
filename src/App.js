@@ -12,9 +12,9 @@ import Recipes from './pages/Recipeslist'
 const App = () => {
   return (
     <div>
-      <header>
+      {/* <header>
         <Nav />
-      </header>
+      </header> */}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
