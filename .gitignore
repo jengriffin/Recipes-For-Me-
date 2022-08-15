@@ -1,6 +1,7 @@
-# dependencies
 
 /node_modules
+.DS_Store
+.env
 /.pnp
 .pnp.js
 package-lock.json

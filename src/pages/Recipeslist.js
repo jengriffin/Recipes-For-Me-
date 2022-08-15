@@ -2,7 +2,13 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
+<<<<<<< HEAD
 import { BASE_URL } from '../globals'
+=======
+// import { BASE_URL } from '../globals'
+
+// const BASE_URL = 'https://recipes-for-me-api.herokuapp.com/'
+>>>>>>> f08775d3c1693ca5ffeb920233bfb219abf3892e
 
 const Recipes = (props) => {
   let navigate = useNavigate()
@@ -17,7 +23,9 @@ const Recipes = (props) => {
   useEffect(() => {
     const getRecipes = async () => {
       console.log('get recipes')
-      let res = await axios.get(`${BASE_URL}/feed`)
+      let res = await axios.get(
+        'https://recipes-for-me-api.herokuapp.com/api/recipes/all'
+      )
       console.log(res.data)
       setRecipe(res.data)
     }
@@ -27,7 +35,7 @@ const Recipes = (props) => {
   return (
     <div className="recipe-grid">
       {recipe
-        ? recipe.map((recipes) => (
+        ? recipe.map((recipe) => (
             <div
               className="recipe-card"
               onClick={() => showRecipes(recipe)}
