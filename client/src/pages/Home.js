@@ -1,5 +1,6 @@
 //import './App.css'
 import { Link } from 'react-router-dom'
+
 const Home = () => {
   return (
     <div className="home">
@@ -12,7 +13,7 @@ const Home = () => {
       </div>
       <div>
         <Link to="/">Sign In</Link>
-        <Link to="/">Register</Link>
+        <Link to="/register">Register</Link>
       </div>
     </div>
   )
