@@ -8,20 +8,16 @@ import Home from './pages/Home'
 import About from './pages/About'
 import { Route, Routes } from 'react-router-dom'
 import Recipes from './pages/Recipeslist'
+import './sideNav.css'
 
 const App = () => {
   return (
-    <div>
-      {/* <header>
-        <Nav />
-      </header> */}
+    <div className="main_app">
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/feed" element={<Recipes />} />
-          <Route />
-
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
         </Routes>
