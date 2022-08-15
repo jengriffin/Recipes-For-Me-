@@ -9,7 +9,7 @@ const Home = () => {
         <h2></h2>
       </div>
       <div>
-        <img sre="" alt="background" />
+        <img src="" alt="background" />
       </div>
       <div>
         <Link to="/">Sign In</Link>
