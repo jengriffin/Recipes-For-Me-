@@ -4,7 +4,10 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Nav from './components/Nav'
 import RecipeForm from './pages/RecipesForm'
 import Register from './pages/Register'
+import Home from './pages/Home'
+import About from './pages/About'
 import { Route, Routes } from 'react-router-dom'
+import './App.css'
 
 const App = () => {
   return (
@@ -14,10 +17,10 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          {/* <Route />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route />
           <Route />
-          <Route />*/}
 
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
