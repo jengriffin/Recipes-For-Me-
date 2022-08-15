@@ -1,3 +1,39 @@
+* { background-color: #ffffeb;}
+
+a{
+  color: #ffffeb;
+  background-color: #003049;
+  text-decoration: none;
+}
+a:visited {
+  color:#ffffeb;
+  text-decoration: none;
+}
+.navbar {
+  background-color: #003049;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#bottom {
+  margin-top: 160px;
+}
+
+.header_logo {
+  height: 180px;
+  width: 180px;
+  background-color: #003049
+}
+
+.sidenav_button {
+  background-color: #003049;
+  border: 2px solid #ffffeb;
+  height: 50px;
+  width: 30px;
+  border-radius: 15%;
+}
+
 form button {
   background-color: var(--primary-button-hover);
   margin: 1em 0;
@@ -13,4 +49,11 @@ form button:hover {
 form button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+
+.sidenav {
+  background-color: #ffffeb;
+  float: right;
+  font-size: 33px;
 }
