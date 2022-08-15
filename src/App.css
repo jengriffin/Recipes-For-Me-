@@ -44,19 +44,3 @@ form button:disabled {
 }
 
 
-.sidenav {
-  float: right;
-  height: auto;
-  width: auto;
-  font-size: 33px;
-  margin-top: 10px;
-  transform: rotate(-90deg);
-  margin-right: 2px;
-
-}
-
-.sidenav_button {
-  background-color: #003049;
-  height: 500px;
-  width: 30px;
-}

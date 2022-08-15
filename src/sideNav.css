@@ -1,0 +1,45 @@
+.sidenav {
+  color: #ffffeb;
+  background-color: #ffffeb;
+  height: 50%;
+  width: 66px;
+  position: fixed;
+  z-index: 1;
+  top: 190px;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  
+
+}
+
+.sidenav_links {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  height: 140px;
+  width: 66px;
+  background-color: #003049;
+  margin: 10px;
+  border-radius: 0 7px 7px 0 ;
+  box-shadow: 2px 0 5px 0 #2a2a2a;
+}
+
+.tab {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.navbar_container {
+  background-color: #003049;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav_links {
+  margin-top: 150px;
+  
+}
