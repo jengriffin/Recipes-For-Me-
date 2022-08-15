@@ -9,6 +9,7 @@ const Register = () => {
     password: '',
     confirmPassword: ''
   })
+  console.log(formValues)
 
   let navigate = useNavigate()
 

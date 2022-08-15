@@ -1,4 +1,4 @@
-import './App.css'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <div>
         <Link to="/">Sign In</Link>
-        <Link to="/">Register</Link>
+        <Link to="/register">Register</Link>
       </div>
     </div>
   )

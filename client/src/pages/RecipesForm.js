@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 
 import { useState, useEffect } from 'react'
-const BASE_URL = ''
+
 function RecipeForm() {
   const initialState = {
     title: '',
