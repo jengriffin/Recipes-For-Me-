@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
-;<h1>Register</h1>
+document.body.style.backgroundColor = '#ffffeb'
 
 const Register = () => {
   const [formValues, setFormValues] = useState({
