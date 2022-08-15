@@ -1,17 +1,19 @@
 import { NavLink } from 'react-router-dom'
 import '../App.css'
+import '../sideNav.css'
 
 const SideNav =()=>{
     return(
     <div className='sidenav'>
-        <nav>
-        <div>
-
-        <NavLink className='sidenav_button' to='/'>My Recipes</NavLink>
-        <NavLink className='sidenav_button' to='/'>Back to top</NavLink>
-
+        <div className='sidenav_links'>
+        <NavLink className='tab' to='/'>My Recipes</NavLink>
         </div>
-    </nav>
+        <div className='sidenav_links'>
+        <NavLink className='tab' to='/'>Add a Recipe</NavLink>
+        </div>
+        <div className='sidenav_links'>
+        <NavLink className='tab' to='/'>Back to Top</NavLink>
+        </div>
     </div>
     )
 }
