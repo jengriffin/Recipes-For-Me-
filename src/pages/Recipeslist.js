@@ -3,23 +3,21 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
-const BASE_URL = 'http://localhost:3000'
-
 const Recipes = (props) => {
   let navigate = useNavigate()
 
   const [recipe, setRecipe] = useState('')
 
   const showRecipes = (recipe) => {
-    // console.log(recipe._id)
+    console.log(recipe._id)
     navigate()
   }
 
   useEffect(() => {
     const getRecipes = async () => {
-      // console.log('get recipes')
-      let res = await axios.get(`${BASE_URL}/`)
-      // console.log(res.data)
+      console.log('get recipes')
+      let res = await axios.get(`${BASE_URL}/feed`)
+      console.log(res.data)
       setRecipe(res.data)
     }
     getRecipes()
