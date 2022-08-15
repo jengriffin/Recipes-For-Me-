@@ -5,9 +5,10 @@ const Nav =()=>{
      <nav>
         <div>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/add'>Add a Recipe</NavLink>
+        <NavLink to='/recipeform'>Add a Recipe</NavLink>
         <NavLink to='/signin'>Sign In</NavLink>
         <NavLink to='/register'>Register</NavLink>
+        <NavLink to='/feed'>Recipes</NavLink>
         </div>
      </nav>
     )
