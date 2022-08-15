@@ -4,12 +4,15 @@ const Nav =()=>{
     return(
      <div className='navbar_container'>
      <nav>
-        <div className='navbar'>
-        <NavLink id='bottom' className='nav_link' to='/'>Home</NavLink>
-        <NavLink id='bottom'  to='/add'>Add a Recipe</NavLink>
+
+        <div>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/recipeform'>Add a Recipe</NavLink>
         <img className='header_logo' src='https://gdurl.com/R93j'/>
-        <NavLink id='bottom'  to='/signin'>Sign In</NavLink>
-        <NavLink id='bottom'  to='/register'>Register</NavLink>
+        <NavLink to='/signin'>Sign In</NavLink>
+        <NavLink to='/register'>Register</NavLink>
+        <NavLink to='/feed'>Recipes</NavLink>
+
         </div>
      </nav>
      </div>
