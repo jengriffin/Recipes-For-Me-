@@ -1,6 +1,7 @@
-const BASE_URL = 'postgresql-trapezoidal-18213'
+const BASE_URL = 'https://obscure-reef-40887.herokuapp.com/'
 
-const DATABASE_URL = 'http://localhost:3000'
+//'http://localhost:3000'
+const DATABASE_URL = 'postgresql-trapezoidal-18213'
 module.exports = {
   BASE_URL,
   DATABASE_URL
