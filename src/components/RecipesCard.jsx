@@ -1,4 +1,4 @@
-const RecipesCard =({ recipe})=>{
+const RecipesCard =({ recipe })=>{
     return(
         <span className="recipe-card">
         <h3>{recipe.name}</h3>
