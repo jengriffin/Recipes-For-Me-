@@ -26,14 +26,6 @@ a:visited {
   background-color: #003049
 }
 
-.sidenav_button {
-  background-color: #003049;
-  border: 2px solid #ffffeb;
-  height: 50px;
-  width: 30px;
-  border-radius: 15%;
-}
-
 form button {
   background-color: var(--primary-button-hover);
   margin: 1em 0;
@@ -53,7 +45,18 @@ form button:disabled {
 
 
 .sidenav {
-  background-color: #ffffeb;
   float: right;
+  height: auto;
+  width: auto;
   font-size: 33px;
+  margin-top: 10px;
+  transform: rotate(-90deg);
+  margin-right: 2px;
+
+}
+
+.sidenav_button {
+  background-color: #003049;
+  height: 500px;
+  width: 30px;
 }
