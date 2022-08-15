@@ -1,6 +1,6 @@
 .sidenav {
   color: #ffffeb;
-  background-color: #ffffeb;
+  background-color: transparent;
   height: 50%;
   width: 66px;
   position: fixed;
@@ -9,8 +9,12 @@
   right: 0;
   overflow-x: hidden;
   padding-top: 60px;
-  
+}
 
+.home {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain
 }
 
 .sidenav_links {
@@ -20,8 +24,8 @@
   width: 66px;
   background-color: #003049;
   margin: 10px;
-  border-radius: 0 7px 7px 0 ;
-  box-shadow: 2px 0 5px 0 #2a2a2a;
+  border-radius: 0 3px 20px 0 ;
+  box-shadow: 3px 0 10px 0 #2a2a2a;
 }
 
 .tab {
@@ -42,4 +46,14 @@
 .nav_links {
   margin-top: 150px;
   
+}
+
+.food {
+  width: 68%;
+  margin: auto;
+  margin-top: 35px;
+  display: block;
+  border: 3px solid #003049;
+  border-radius: 8px;
+  box-shadow: 6px 0 15px #2a2a2a;
 }

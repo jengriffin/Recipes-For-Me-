@@ -1,4 +1,6 @@
-//import '../App.css'
+import '../App.css'
+import '../sideNav.css'
+
 import { Route, Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import SideNav from '../components/SideNav'
@@ -11,13 +13,11 @@ const Home = () => {
         <Nav />
         <SideNav />
       </div>
-      <div>
-        <img src="https://gdurl.com/nZEd" alt="background" />
-      </div>
-      <div>
-        {/* <Link to="/">Sign In</Link>
-        <Link to="/register">Register</Link> */}
-      </div>
+      <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
+      <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
+      <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
+      <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
+      <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
     </div>
   )
 }
