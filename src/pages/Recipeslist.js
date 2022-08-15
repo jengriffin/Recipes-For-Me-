@@ -39,9 +39,9 @@ const Recipes = (props) => {
               <img
                 style={{ display: 'block' }}
                 src={recipe.image}
-                alt={recipe.name}
+                alt={recipe.title}
               />
-              <h1>{recipe.name}</h1>
+              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}
