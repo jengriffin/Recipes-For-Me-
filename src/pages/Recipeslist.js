@@ -2,9 +2,8 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
-// import { BASE_URL } from '../globals'
 
-// const BASE_URL = 'https://recipes-for-me-api.herokuapp.com/'
+import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
   let navigate = useNavigate()
