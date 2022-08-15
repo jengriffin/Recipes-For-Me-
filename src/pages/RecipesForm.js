@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
-
+const BASE_URL = 'http://localhost:3000'
 function RecipeForm() {
   const initialState = {
     title: '',
@@ -16,7 +16,7 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get('localhost:3000/recipeform')
+        let res = await axios.get(`${BASE_URL}/recipeform`)
         // console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {

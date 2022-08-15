@@ -1,19 +1,22 @@
-//import './App.css'
+//import '../App.css'
+import { Route, Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import SideNav from '../components/SideNav'
+import Nav from '../components/Nav'
 
 const Home = () => {
   return (
     <div className="home">
       <div>
-        <h1>Recipe for Me</h1>
-        <h2></h2>
+        <Nav />
+        <SideNav />
       </div>
       <div>
         <img src="" alt="background" />
       </div>
       <div>
-        <Link to="/">Sign In</Link>
-        <Link to="/register">Register</Link>
+        {/* <Link to="/">Sign In</Link>
+        <Link to="/register">Register</Link> */}
       </div>
     </div>
   )
