@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Nav from './components/Nav'
 import RecipeForm from './pages/RecipesForm'
-import { Route, Routes } from 'react-router-dom'
+import Register from './pages/Register'
 import Home from './pages/Home'
 import About from './pages/About'
-import Register from './pages/Register'
+import { Route, Routes } from 'react-router-dom'
+import Recipes from './pages/Recipeslist'
+
 const App = () => {
   return (
     <div>
@@ -17,8 +19,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/feed" element={<Recipes />} />
           <Route />
-          <Route />
+
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
         </Routes>
