@@ -5,12 +5,14 @@ import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 
 const Register = () => {
-  const [formValues, setFormValues] = useState({
+  const initialState = {
     name: '',
     email: '',
     password: '',
     confirmPassword: ''
-  })
+  }
+
+  const [formValues, setFormValues] = useState({})
   console.log(formValues)
 
   let navigate = useNavigate()
@@ -26,13 +28,8 @@ const Register = () => {
       email: formValues.email,
       password: formValues.password
     })
-    setFormValues({
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    })
-    navigate('/signin')
+    setFormValues(initialState)
+    navigate('/signup')
   }
 
   return (
