@@ -1,8 +1,8 @@
-//import axios from 'axios'
+import axios from 'axios'
 
 export const BASE_URL = 'http://localhost:3000'
 
-//const Client = axios.create({ baseURL: BASE_URL })
+const Client = axios.create({ baseURL: BASE_URL })
 
 // Intercepts every request axios makes
 Client.interceptors.request.use(
