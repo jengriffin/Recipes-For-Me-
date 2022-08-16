@@ -15,25 +15,34 @@ function RecipeForm() {
   const [recipe, setRecipe] = useState({})
 
   const [formState, setFormState] = useState(initialState)
+
   useEffect(() => {
     const getRecipe = async () => {
       try {
         let res = await axios.get(`${BASE_URL}/api/recipes/all`)
         // console.log(res.data)
+
         setRecipe(res.data)
-      } catch (eer) {
-        // console.log(eer)
-      }
+      } catch (eer) {}
     }
     getRecipe()
   }, [])
 
   const handleChange = (event) => {
+    const [formValues, setFormValues] = useState({
+      name: '',
+      image: '',
+      ingredients: '',
+      directions: '',
+      category: ''
+    })
+
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
     // console.log(formState)
     let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
@@ -80,14 +89,19 @@ function RecipeForm() {
           name={'directions'}
           placeholder={'directions'}
         />
-        <input
-          type="text"
-          id="category"
-          value={recipe.category}
-          onChange={handleChange}
-          name={'category'}
-          placeholder={'category'}
-        />
+
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="Diabetic Friendly">Diabetic Friendly</option>
+          <option value="Gluten Free">Gluten Free</option>
+          <option value="Halal">Halal</option>
+          <option value="Kosher">Kosher</option>
+          <option value="Lactose Free">Lactose Free</option>
+          <option value="Low Sodium">Low Sodium</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Vegetarian">Vegetarian</option>
+        </select>
+
         <button type="submit">Submit</button>
       </form>
     </div>
