@@ -34,9 +34,12 @@ const Recipes = (props) => {
       </div>
       {recipe
         ? recipe.map((recipe) => (
-            <div className="recipe-card">
+            <div
+              className="recipe-card"
+              onClick={() => showRecipes(recipe)}
+              key={recipe.id}
+            >
               <h1>{recipe.title}</h1>
-
               <img
                 style={{ display: 'block' }}
                 src={recipe.image}
