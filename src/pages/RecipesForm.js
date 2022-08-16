@@ -19,7 +19,8 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/recipeform`)
+        let res = await axios.get(`${BASE_URL}/api/recipes/all`)
+        // console.log(res.data)
 
         setRecipe(res.data)
       } catch (eer) {}
@@ -42,10 +43,9 @@ function RecipeForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    console.log(formState)
-    let res = await axios.post(`${BASE_URL}/recipeform`, formState)
+    // console.log(formState)
+    let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
-
     setFormState(initialState)
   }
 

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
-
 import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
@@ -13,8 +12,8 @@ const Recipes = (props) => {
   const [recipe, setRecipe] = useState('')
 
   const showRecipes = (recipe) => {
-    console.log(recipe._id)
-    navigate()
+    console.log(recipe.id)
+    navigate(`/recipes/${recipe.id}`)
   }
 
   useEffect(() => {
@@ -35,8 +34,12 @@ const Recipes = (props) => {
       </div>
       {recipe
         ? recipe.map((recipe) => (
-            <div className="recipe_grid">
-              <h1 className="recipe_title">{recipe.title}</h1>
+            <div
+              className="recipe-card"
+              onClick={() => showRecipes(recipe)}
+              key={recipe.id}
+            >
+              <h1>{recipe.title}</h1>
               <img
                 className="recipe_card"
                 style={{ display: 'block' }}
