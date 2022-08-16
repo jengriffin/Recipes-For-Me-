@@ -55,8 +55,8 @@ function RecipeForm() {
         <Nav />
         <SideNav />
       </div>
-      <h1>Add A New Recipe</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="recipe_title">Add A New Recipe</h1>
+      <form className="form_container" onSubmit={handleSubmit}>
         <input
           type="text"
           id="title"
@@ -89,7 +89,6 @@ function RecipeForm() {
           name={'directions'}
           placeholder={'directions'}
         />
-
         <label for="category">Category:</label>
         <select id="category">
           <option value="Diabetic Friendly">Diabetic Friendly</option>

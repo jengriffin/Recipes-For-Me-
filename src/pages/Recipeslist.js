@@ -27,7 +27,7 @@ const Recipes = (props) => {
   }, [props.recipe])
 
   return (
-    <div className="recipe-grid">
+    <div className="recipes_list">
       <div>
         <Nav />
         <SideNav />
@@ -41,11 +41,11 @@ const Recipes = (props) => {
             >
               <h1>{recipe.title}</h1>
               <img
+                className="recipe_card"
                 style={{ display: 'block' }}
                 src={recipe.image}
                 alt={recipe.title}
               />
-              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}
