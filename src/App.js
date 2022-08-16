@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import About from './pages/About'
 import Recipes from './pages/Recipeslist'
+import Landing from './pages/Landing'
 import './sideNav.css'
 
 const App = () => {
@@ -15,11 +16,12 @@ const App = () => {
     <div className="main_app">
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/feed" element={<Recipes />} />
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
       </main>
     </div>
