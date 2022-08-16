@@ -42,6 +42,10 @@
   height: auto;
 }
 
+.directions{
+  height: 280px;
+}
+
 input {
   background-color: white;
   margin: 10px;

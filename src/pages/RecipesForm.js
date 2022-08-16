@@ -84,11 +84,11 @@ function RecipeForm() {
         <input
           type="text-area"
           id="directions"
-          cols="30"
-          rows="10"
           value={recipe.directions}
           onChange={handleChange}
-          name={'directions'}
+          name="directions"
+          cols="300"
+          rows="100"
           placeholder={'directions'}
         />
         <label for="category">Category:</label>
