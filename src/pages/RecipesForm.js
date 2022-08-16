@@ -78,14 +78,17 @@ function RecipeForm() {
           name={'directions'}
           placeholder={'directions'}
         />
-        <input
-          type="text"
-          id="population"
-          value={recipe.category}
-          onChange={handleChange}
-          name={'category'}
-          placeholder={'category'}
-        />
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="Diabetic Friendly">Diabetic Friendly</option>
+          <option value="Gluten Free">Gluten Free</option>
+          <option value="Halal">Halal</option>
+          <option value="Kosher">Kosher</option>
+          <option value="Lactose Free">Lactose Free</option>
+          <option value="Low Sodium">Low Sodium</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Vegetarian">Vegetarian</option>
+        </select>
         <button type="submit">Submit</button>
       </form>
     </div>
