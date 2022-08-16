@@ -19,11 +19,9 @@ function RecipeForm() {
     const getRecipe = async () => {
       try {
         let res = await axios.get(`${BASE_URL}/recipeform`)
-        // console.log(res.data)
+
         setRecipe(res.data)
-      } catch (eer) {
-        // console.log(eer)
-      }
+      } catch (eer) {}
     }
     getRecipe()
   }, [])
@@ -34,9 +32,9 @@ function RecipeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // console.log(formState)
+
     let res = await axios.post(`${BASE_URL}/recipeform`, formState)
-    // console.log(res)
+
     setFormState(initialState)
   }
 
