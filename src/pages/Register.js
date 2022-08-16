@@ -33,7 +33,7 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
+    <div className="signin">
       <div className="card-overlay centered">
         <div>
           <Nav />
