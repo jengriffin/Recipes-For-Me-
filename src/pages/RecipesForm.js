@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
-const BASE_URL = 'http://localhost:3000'
+import { BASE_URL } from '../globals'
 function RecipeForm() {
   const initialState = {
     title: '',
@@ -40,6 +40,10 @@ function RecipeForm() {
 
   return (
     <div className="form">
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       <h1>Add A New Recipe</h1>
       <form onSubmit={handleSubmit}>
         <input

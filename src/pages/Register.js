@@ -36,6 +36,10 @@ const Register = () => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
+        <div>
+          <Nav />
+          <SideNav />
+        </div>
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="name">Name</label>
