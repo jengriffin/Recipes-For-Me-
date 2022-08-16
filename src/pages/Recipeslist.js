@@ -2,9 +2,9 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
-
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
+
 import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
@@ -20,9 +20,7 @@ const Recipes = (props) => {
   useEffect(() => {
     const getRecipes = async () => {
       console.log('get recipes')
-      let res = await axios.get(
-        'https://recipes-for-me-api.herokuapp.com/api/recipes/all'
-      )
+      let res = await axios.get(`${BASE_URL}/api/recipes/all`)
       console.log(res.data)
       setRecipe(res.data)
     }
