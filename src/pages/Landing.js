@@ -7,7 +7,6 @@ import { NavLink } from 'react-router-dom'
 const Landing = () => {
   return (
     <div className="landing">
-      <p>Welcome</p>
       <NavLink className="landing_link" to="/home">
         <img className="hero_img" src="https://gdurl.com/ViUl" />
       </NavLink>
