@@ -9,6 +9,7 @@ import About from './pages/About'
 import { Route, Routes } from 'react-router-dom'
 import Recipes from './pages/Recipeslist'
 import './sideNav.css'
+import RecipesCard from './components/RecipesCard'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/feed" element={<Recipes />} />
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
+          <Route path="/recipes/:id" element={<RecipesCard />} />
         </Routes>
       </main>
     </div>

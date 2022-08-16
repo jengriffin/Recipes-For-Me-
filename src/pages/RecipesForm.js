@@ -40,6 +40,10 @@ function RecipeForm() {
 
   return (
     <div className="form">
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       <h1>Add A New Recipe</h1>
       <form onSubmit={handleSubmit}>
         <input
