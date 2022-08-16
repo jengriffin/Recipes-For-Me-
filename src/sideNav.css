@@ -26,12 +26,14 @@
   background-color: #003049;
   margin: 10px;
   border-radius: 0 3px 20px 0 ;
-  box-shadow: 3px 0 10px 0 #2a2a2a;
+  /* box-shadow: 3px -2px 6px -2px #2a2a2a; */
+  box-shadow: 6px -6px 9px -4px #003049;
 }
 
 .sidenav_links:hover {
   margin: 13px 13px 10px 10px;
-  box-shadow: 8px 0 12px 0 #464646;
+  /* box-shadow: 5px -2px 8px -2px #464646; */
+  box-shadow: 8px -6px 10px -8px #003049;
 }
 
 .tab {
@@ -68,7 +70,7 @@
   object-fit: cover;
   border: 3px solid #003049;
   border-radius: 8px;
-  box-shadow: 6px 0 15px #2a2a2a;
+  box-shadow: 6px -6px 9px -4px #003049;
 }
 
 .recipe_card {

@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
-//import { BASE_URL } from '../globals'
+import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
   let navigate = useNavigate()
@@ -31,7 +31,6 @@ const Recipes = (props) => {
 
   return (
     <div className="recipe-grid">
-
       <div>
         <Nav />
         <SideNav />
