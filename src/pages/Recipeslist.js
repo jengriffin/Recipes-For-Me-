@@ -2,7 +2,6 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { BASE_URL } from '../globals'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 const Recipes = (props) => {
@@ -36,11 +35,11 @@ const Recipes = (props) => {
       {recipe
         ? recipe.map((recipe) => (
             <div className="recipe-card">
-              <h1>{recipe.name}</h1>
+              <h1>{recipe.title}</h1>
               <img
                 style={{ display: 'block' }}
                 src={recipe.image}
-                alt={recipe.name}
+                alt={recipe.title}
               />
             </div>
           ))
