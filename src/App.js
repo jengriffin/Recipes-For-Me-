@@ -10,6 +10,8 @@ import About from './pages/About'
 import Recipes from './pages/Recipeslist'
 import Landing from './pages/Landing'
 import './sideNav.css'
+import RecipesCard from './components/RecipesCard'
+import Signin from './pages/Signin'
 
 const App = () => {
   return (
@@ -21,7 +23,12 @@ const App = () => {
           <Route path="/feed" element={<Recipes />} />
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
+
           <Route path="/" element={<Landing />} />
+
+          <Route path="/recipes/:id" element={<RecipesCard />} />
+          <Route path="/signup" element={<Signin />} />
+
         </Routes>
       </main>
     </div>

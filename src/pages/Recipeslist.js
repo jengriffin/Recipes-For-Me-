@@ -2,12 +2,10 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
-// import { BASE_URL } from '../globals'
-// import { BASE_URL } from '../globals'
 
-// const BASE_URL = 'https://recipes-for-me-api.herokuapp.com/'
-
-// import { BASE_URL } from '../globals'
+import Nav from '../components/Nav'
+import SideNav from '../components/SideNav'
+//import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
   let navigate = useNavigate()
@@ -33,19 +31,21 @@ const Recipes = (props) => {
 
   return (
     <div className="recipe-grid">
+
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       {recipe
         ? recipe.map((recipe) => (
-            <div
-              className="recipe-card"
-              onClick={() => showRecipes(recipe)}
-              key={recipe._id}
-            >
+            <div className="recipe-card">
+              <h1>{recipe.title}</h1>
               <img
                 style={{ display: 'block' }}
                 src={recipe.image}
-                alt={recipe.name}
+                alt={recipe.title}
               />
-              <h1>{recipe.name}</h1>
+              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}

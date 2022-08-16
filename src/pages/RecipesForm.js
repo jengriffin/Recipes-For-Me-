@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
-const BASE_URL = 'http://localhost:3000'
+import { BASE_URL } from '../globals'
+import Nav from '../components/Nav'
+import SideNav from '../components/SideNav'
 function RecipeForm() {
   const initialState = {
     title: '',
@@ -33,13 +35,17 @@ function RecipeForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     // console.log(formState)
-    let res = await axios.post('http://localhost:3001/recipeform', formState)
+    let res = await axios.post(`${BASE_URL}/recipeform`, formState)
     // console.log(res)
     setFormState(initialState)
   }
 
   return (
     <div className="form">
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       <h1>Add A New Recipe</h1>
       <form onSubmit={handleSubmit}>
         <input

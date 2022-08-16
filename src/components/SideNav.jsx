@@ -14,7 +14,7 @@ const SideNav =()=>{
         <NavLink className='tab' to='/'>My Recipes</NavLink>
         </div>
         <div className='sidenav_links'>
-        <NavLink className='tab' to='/'>Add a Recipe</NavLink>
+        <NavLink className='tab' to='/recipeform'>Add a Recipe</NavLink>
         </div>
         <div className='sidenav_links' >
         <a className='tab' href='#top' >Back to Top</a>
