@@ -28,21 +28,21 @@ const Recipes = (props) => {
   }, [props.recipe])
 
   return (
-    <div className="recipe-grid">
+    <div className="recipes_list">
       <div>
         <Nav />
         <SideNav />
       </div>
       {recipe
         ? recipe.map((recipe) => (
-            <div className="recipe-card">
-              <h1>{recipe.title}</h1>
+            <div className="recipe_grid">
+              <h1 className="recipe_title">{recipe.title}</h1>
               <img
+                className="recipe_card"
                 style={{ display: 'block' }}
                 src={recipe.image}
                 alt={recipe.title}
               />
-              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}

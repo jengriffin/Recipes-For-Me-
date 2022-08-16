@@ -46,8 +46,8 @@ function RecipeForm() {
         <Nav />
         <SideNav />
       </div>
-      <h1>Add A New Recipe</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="recipe_title">Add A New Recipe</h1>
+      <form className="form_container" onSubmit={handleSubmit}>
         <input
           type="text"
           id="name"

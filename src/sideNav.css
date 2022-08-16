@@ -18,6 +18,29 @@
   background-size:contain
 }
 
+.recipes_list {
+  background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain
+}
+
+.form {
+  background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain
+}
+
+.form_container {
+  background-color: transparent;
+  height: 1000px;
+}
+
+input {
+  background-color: white;
+}
+
 .sidenav_links {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
@@ -52,11 +75,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 36;
   border-bottom: 3px solid #D95830;
 }
 
 .nav_links {
   margin-top: 150px;
+  font-size: 20px;
   
 }
 
@@ -71,19 +96,38 @@
   border: 3px solid #003049;
   border-radius: 8px;
   box-shadow: 6px -6px 9px -4px #003049;
+  background-color: transparent;
 }
 
 .recipe_card {
   width: 66%;
   max-height: 336px;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 10px;
   margin-bottom: 35px ;
   display: block;
   object-fit: cover;
   border: 3px solid #003049;
   border-radius: 8px;
   box-shadow: 6px 0 15px #2a2a2a;
+  background-color: transparent;
+}
+
+.recipe_grid {
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.recipe_title {
+  color: #003049;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'League Gothic', sans-serif;
+  margin-bottom: 2px;
+  font-size: 48px;
+  background-color: transparent;
+
 }
 
 .landing {
@@ -117,3 +161,4 @@
   margin: auto;
 
 }
+
