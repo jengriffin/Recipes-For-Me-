@@ -2,9 +2,12 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
+
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
+
 import { BASE_URL } from '../globals'
+
 const Recipes = (props) => {
   let navigate = useNavigate()
 
@@ -40,6 +43,7 @@ const Recipes = (props) => {
                 src={recipe.image}
                 alt={recipe.title}
               />
+              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}
