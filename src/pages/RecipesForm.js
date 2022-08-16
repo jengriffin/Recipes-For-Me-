@@ -15,10 +15,12 @@ function RecipeForm() {
   const [recipe, setRecipe] = useState({})
 
   const [formState, setFormState] = useState(initialState)
+
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/recipeform`)
+        let res = await axios.get(`${BASE_URL}/api/recipes/all`)
+        // console.log(res.data)
 
         setRecipe(res.data)
       } catch (eer) {}
@@ -27,14 +29,23 @@ function RecipeForm() {
   }, [])
 
   const handleChange = (event) => {
+    const [formValues, setFormValues] = useState({
+      name: '',
+      image: '',
+      ingredients: '',
+      directions: '',
+      category: ''
+    })
+
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    let res = await axios.post(`${BASE_URL}/recipeform`, formState)
-
+    // console.log(formState)
+    let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
+    console.log(res)
     setFormState(initialState)
   }
 
@@ -44,19 +55,19 @@ function RecipeForm() {
         <Nav />
         <SideNav />
       </div>
-      <h1>Add A New Recipe</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="recipe_title">Add A New Recipe</h1>
+      <form className="form_container" onSubmit={handleSubmit}>
         <input
           type="text"
-          id="name"
-          value={recipe.name}
+          id="title"
+          value={recipe.title}
           onChange={handleChange}
-          name={'name'}
-          placeholder={'name'}
+          name={'title'}
+          placeholder={'title'}
         />
         <input
           type="text"
-          id="state"
+          id="image"
           value={recipe.image}
           onChange={handleChange}
           name={'image'}
@@ -64,7 +75,7 @@ function RecipeForm() {
         />
         <input
           type="text"
-          id="image"
+          id="ingredients"
           value={recipe.ingredients}
           onChange={handleChange}
           name={'ingredients'}
@@ -91,6 +102,7 @@ function RecipeForm() {
           <option value="Vegan">Vegan</option>
           <option value="Vegetarian">Vegetarian</option>
         </select>
+
         <button type="submit">Submit</button>
       </form>
     </div>
