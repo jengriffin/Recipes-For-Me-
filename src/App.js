@@ -10,6 +10,7 @@ import About from './pages/About'
 import Recipes from './pages/Recipeslist'
 import './sideNav.css'
 import RecipesCard from './components/RecipesCard'
+import Signin from './pages/Signin'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
           <Route path="/recipes/:id" element={<RecipesCard />} />
+          <Route path="/signup" element={<Signin />} />
         </Routes>
       </main>
     </div>
