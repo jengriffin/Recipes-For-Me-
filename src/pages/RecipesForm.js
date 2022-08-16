@@ -15,28 +15,24 @@ function RecipeForm() {
   const [recipe, setRecipe] = useState({})
 
   const [formState, setFormState] = useState(initialState)
-  useEffect(() => {
-    const getRecipe = async () => {
-      try {
-        let res = await axios.get(`${BASE_URL}/recipeform`)
-        // console.log(res.data)
-        setRecipe(res.data)
-      } catch (eer) {
-        // console.log(eer)
-      }
-    }
-    getRecipe()
-  }, [])
 
   const handleChange = (event) => {
+    const [formValues, setFormValues] = useState({
+      name: '',
+      image: '',
+      ingredients: '',
+      directions: '',
+      category: ''
+    })
+
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // console.log(formState)
+    console.log(formState)
     let res = await axios.post(`${BASE_URL}/recipeform`, formState)
-    // console.log(res)
+    console.log(res)
     setFormState(initialState)
   }
 
@@ -50,15 +46,15 @@ function RecipeForm() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          id="name"
-          value={recipe.name}
+          id="title"
+          value={recipe.title}
           onChange={handleChange}
-          name={'name'}
-          placeholder={'name'}
+          name={'title'}
+          placeholder={'title'}
         />
         <input
           type="text"
-          id="state"
+          id="image"
           value={recipe.image}
           onChange={handleChange}
           name={'image'}
@@ -66,7 +62,7 @@ function RecipeForm() {
         />
         <input
           type="text"
-          id="image"
+          id="ingredients"
           value={recipe.ingredients}
           onChange={handleChange}
           name={'ingredients'}
@@ -74,7 +70,7 @@ function RecipeForm() {
         />
         <input
           type="text-area"
-          id="description"
+          id="directions"
           value={recipe.directions}
           onChange={handleChange}
           name={'directions'}
@@ -82,7 +78,7 @@ function RecipeForm() {
         />
         <input
           type="text"
-          id="population"
+          id="category"
           value={recipe.category}
           onChange={handleChange}
           name={'category'}

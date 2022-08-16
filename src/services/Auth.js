@@ -3,7 +3,7 @@ import Client from './api'
 
 export const RegisterUser = async (data) => {
   try {
-    const res = await User.post(`${BASE_URL}/api/users/create`, data)
+    const res = await Client.post(`${BASE_URL}/api/users/create`, data)
     return res.data
   } catch (error) {
     throw error
@@ -11,7 +11,7 @@ export const RegisterUser = async (data) => {
 }
 export const SignInUser = async (data) => {
   try {
-    const res = await User.post(`${BASE_URL}/api/auth/login`, data)
+    const res = await Client.post(`${BASE_URL}/api/auth/login`, data)
     return res.data.user
   } catch (error) {
     throw error
@@ -19,7 +19,7 @@ export const SignInUser = async (data) => {
 }
 export const CheckSession = async () => {
   try {
-    const res = await User.get('/auth/session')
+    const res = await Client.get('/auth/session')
     return res.data
   } catch (error) {
     throw error
