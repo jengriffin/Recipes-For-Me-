@@ -18,9 +18,7 @@ const Recipes = (props) => {
   useEffect(() => {
     const getRecipes = async () => {
       console.log('get recipes')
-      let res = await axios.get(
-        'https://recipes-for-me-api.herokuapp.com/api/recipes/all'
-      )
+      let res = await axios.get(`${BASE_URL}/api/recipes/all`)
       console.log(res.data)
       setRecipe(res.data)
     }
