@@ -1,8 +1,9 @@
+import { BASE_URL } from '../globals'
 import Client from './api'
 
 export const RegisterUser = async (data) => {
   try {
-    const res = await Client.post('/auth/register', data)
+    const res = await User.post(`${BASE_URL}/api/users/create`, data)
     return res.data
   } catch (error) {
     throw error
@@ -10,7 +11,7 @@ export const RegisterUser = async (data) => {
 }
 export const SignInUser = async (data) => {
   try {
-    const res = await Client.post('/auth/login', data)
+    const res = await User.post(`${BASE_URL}/api/auth/login`, data)
     return res.data.user
   } catch (error) {
     throw error
@@ -18,11 +19,9 @@ export const SignInUser = async (data) => {
 }
 export const CheckSession = async () => {
   try {
-    // Checks if the current token if it exists is valid
-    const res = await Client.get('/auth/session')
+    const res = await User.get('/auth/session')
     return res.data
   } catch (error) {
     throw error
   }
 }
-Footer
