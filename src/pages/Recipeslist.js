@@ -34,12 +34,6 @@ const Recipes = (props) => {
       </div>
       {recipe
         ? recipe.map((recipe) => (
-            <div
-              className="recipe-card"
-              onClick={() => showRecipes(recipe)}
-              key={recipe.id}
-            >
-
             <div className="recipe-card">
               <h1>{recipe.title}</h1>
 
