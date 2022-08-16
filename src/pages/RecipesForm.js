@@ -88,7 +88,10 @@ function RecipeForm() {
           name={'category'}
           placeholder={'category'}
         />
-        <button type="submit">Submit</button>
+        <br></br>
+        <button className="submit_button" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   )

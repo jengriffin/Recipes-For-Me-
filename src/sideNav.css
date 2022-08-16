@@ -33,12 +33,24 @@
 }
 
 .form_container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   background-color: transparent;
-  height: 1000px;
+  height: auto;
 }
 
 input {
   background-color: white;
+  margin: 10px;
+  height: 28px;
+}
+
+.submit_button{
+height: 60px;
+width: auto
 }
 
 .sidenav_links {
