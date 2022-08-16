@@ -18,14 +18,12 @@ a:visited {
   justify-content: space-around;
 }
 
-#bottom {
-  margin-top: 160px;
-}
 
 .header_logo {
   height: 180px;
   width: 180px;
-  background-color: #003049
+  background-color:#003049 ;
+  border-radius: 100%;
 }
 
 form button {

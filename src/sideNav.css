@@ -1,11 +1,11 @@
 .sidenav {
   color: #ffffeb;
   background-color: transparent;
-  height: 50%;
+  height: 80%;
   width: 66px;
   position: fixed;
   z-index: 1;
-  top: 190px;
+  top: 160px;
   right: 0;
   overflow-x: hidden;
   padding-top: 60px;
@@ -13,6 +13,7 @@
 
 .home {
   background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
   background-position: center;
   background-size:contain
 }
@@ -38,9 +39,13 @@
 
 .navbar_container {
   background-color: #003049;
+  /* background-image: url("https://gdurl.com/rSJn"); */
+  background-position: center;
+  background-size:contain;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  border-bottom: 3px solid #D95830;
 }
 
 .nav_links {
@@ -50,9 +55,11 @@
 
 .food {
   width: 68%;
+  max-height: 336px;
   margin: auto;
   margin-top: 35px;
   display: block;
+  object-fit: cover;
   border: 3px solid #003049;
   border-radius: 8px;
   box-shadow: 6px 0 15px #2a2a2a;
