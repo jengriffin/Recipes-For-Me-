@@ -72,7 +72,9 @@ function RecipeForm() {
         />
         <input
           type="text-area"
-          id="description"
+          id="directions"
+          cols="30"
+          rows="10"
           value={recipe.directions}
           onChange={handleChange}
           name={'directions'}
