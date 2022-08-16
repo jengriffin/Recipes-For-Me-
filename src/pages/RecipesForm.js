@@ -15,6 +15,7 @@ function RecipeForm() {
   const [recipe, setRecipe] = useState({})
 
   const [formState, setFormState] = useState(initialState)
+
   useEffect(() => {
     const getRecipe = async () => {
       try {
@@ -27,13 +28,23 @@ function RecipeForm() {
   }, [])
 
   const handleChange = (event) => {
+    const [formValues, setFormValues] = useState({
+      name: '',
+      image: '',
+      ingredients: '',
+      directions: '',
+      category: ''
+    })
+
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
 
+    console.log(formState)
     let res = await axios.post(`${BASE_URL}/recipeform`, formState)
+    console.log(res)
 
     setFormState(initialState)
   }
@@ -48,15 +59,15 @@ function RecipeForm() {
       <form className="form_container" onSubmit={handleSubmit}>
         <input
           type="text"
-          id="name"
-          value={recipe.name}
+          id="title"
+          value={recipe.title}
           onChange={handleChange}
-          name={'name'}
-          placeholder={'name'}
+          name={'title'}
+          placeholder={'title'}
         />
         <input
           type="text"
-          id="state"
+          id="image"
           value={recipe.image}
           onChange={handleChange}
           name={'image'}
@@ -64,7 +75,7 @@ function RecipeForm() {
         />
         <input
           type="text"
-          id="image"
+          id="ingredients"
           value={recipe.ingredients}
           onChange={handleChange}
           name={'ingredients'}
@@ -72,24 +83,12 @@ function RecipeForm() {
         />
         <input
           type="text-area"
-          id="description"
+          id="directions"
           value={recipe.directions}
           onChange={handleChange}
           name={'directions'}
           placeholder={'directions'}
         />
-        <input
-          type="text"
-          id="population"
-          value={recipe.category}
-          onChange={handleChange}
-          name={'category'}
-          placeholder={'category'}
-        />
-        <br></br>
-        <button className="submit_button" type="submit">
-          Submit
-        </button>
         <label for="category">Category:</label>
         <select id="category">
           <option value="Diabetic Friendly">Diabetic Friendly</option>
@@ -101,6 +100,7 @@ function RecipeForm() {
           <option value="Vegan">Vegan</option>
           <option value="Vegetarian">Vegetarian</option>
         </select>
+
         <button type="submit">Submit</button>
       </form>
     </div>
