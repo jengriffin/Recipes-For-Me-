@@ -27,7 +27,7 @@ const Recipes = (props) => {
   }, [props.recipe])
 
   return (
-    <div className="recipes_list">
+    <div className="form">
       <div>
         <Nav />
         <SideNav />
@@ -35,11 +35,11 @@ const Recipes = (props) => {
       {recipe
         ? recipe.map((recipe) => (
             <div
-              className="recipe-card"
+              className="recipe_grid"
               onClick={() => showRecipes(recipe)}
               key={recipe.id}
             >
-              <h1>{recipe.title}</h1>
+              <h1 className="recipe_title">{recipe.title}</h1>
               <img
                 className="recipe_card"
                 style={{ display: 'block' }}
