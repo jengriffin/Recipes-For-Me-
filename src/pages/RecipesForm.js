@@ -19,11 +19,9 @@ function RecipeForm() {
     const getRecipe = async () => {
       try {
         let res = await axios.get(`${BASE_URL}/recipeform`)
-        // console.log(res.data)
+
         setRecipe(res.data)
-      } catch (eer) {
-        // console.log(eer)
-      }
+      } catch (eer) {}
     }
     getRecipe()
   }, [])
@@ -34,9 +32,9 @@ function RecipeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // console.log(formState)
+
     let res = await axios.post(`${BASE_URL}/recipeform`, formState)
-    // console.log(res)
+
     setFormState(initialState)
   }
 
@@ -92,6 +90,18 @@ function RecipeForm() {
         <button className="submit_button" type="submit">
           Submit
         </button>
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="Diabetic Friendly">Diabetic Friendly</option>
+          <option value="Gluten Free">Gluten Free</option>
+          <option value="Halal">Halal</option>
+          <option value="Kosher">Kosher</option>
+          <option value="Lactose Free">Lactose Free</option>
+          <option value="Low Sodium">Low Sodium</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Vegetarian">Vegetarian</option>
+        </select>
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
