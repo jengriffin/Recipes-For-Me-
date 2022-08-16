@@ -5,7 +5,18 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const RecipesCard = (props) => {
+  let navigate = useNavigate()
   const [recipe, setRecipe] = useState('')
+
+  const initialState = {
+    title: '',
+    image: '',
+    ingredients: '',
+    directions: '',
+    category: ''
+  }
+
+  const [formState, setFormState] = useState(initialState)
   let { id } = useParams()
 
   useEffect(() => {
@@ -21,13 +32,21 @@ const RecipesCard = (props) => {
     setRecipe(selectedRecipe)
   }, [])
 
+  const deleteRecipe = async () => {
+    // console.log(id)
+    let res = await axios.delete(`${BASE_URL}/api/recipes/${id}`, formState)
+    navigate('/feed')
+  }
+
   return (
-    <span className="recipe-card">
-      <h3>{recipe.title}</h3>
-      <img src={recipe.image} alt="recipe image" />
-      <h4>{recipe.ingredients}</h4>
-      <h4>{recipe.directions}</h4>
-    </span>
+    <div className="">
+      <span className="recipe_grid">
+        <h3 className="recipe_title">{recipe.title}</h3>
+        <img className="recipe_card" src={recipe.image} alt="recipe image" />
+        <h4 className="recipe_subs">{recipe.ingredients}</h4>
+        <h4 className="recipe_subs">{recipe.directions}</h4>
+      </span>
+    </div>
   )
 }
 export default RecipesCard
