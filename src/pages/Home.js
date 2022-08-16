@@ -18,11 +18,6 @@ const Home = () => {
       <img className="food" src="https://gdurl.com/U5_G" alt="yummy pic" />
       <img className="food" src="https://gdurl.com/f2hu" alt="yummy pic" />
       <img className="food" src="https://gdurl.com/Vb6G" alt="yummy pic" />
-      <img
-        className="recipe_card"
-        src="https://gdurl.com/BHhM"
-        alt="recipe card"
-      />
     </div>
   )
 }
