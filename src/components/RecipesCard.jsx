@@ -22,11 +22,11 @@ const RecipesCard = (props) => {
   }, [])
 
   return (
-    <span className="recipe-card">
-      <h3>{recipe.title}</h3>
-      <img src={recipe.image} alt="recipe image" />
-      <h4>{recipe.ingredients}</h4>
-      <h4>{recipe.directions}</h4>
+    <span className="recipe_grid">
+      <h3 className='recipe_title'>{recipe.title}</h3>
+      <img className='recipe_card' src={recipe.image} alt="recipe image" />
+      <h4 className='recipe_subs'>{recipe.ingredients}</h4>
+      <h4 className='recipe_subs'>{recipe.directions}</h4>
     </span>
   )
 }
