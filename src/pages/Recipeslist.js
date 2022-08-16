@@ -2,6 +2,8 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Nav from '../components/Nav'
+import SideNav from '../components/SideNav'
 import { BASE_URL } from '../globals'
 
 const Recipes = (props) => {
@@ -26,6 +28,10 @@ const Recipes = (props) => {
 
   return (
     <div className="recipe-grid">
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       {recipe
         ? recipe.map((recipe) => (
             <div
@@ -33,12 +39,16 @@ const Recipes = (props) => {
               onClick={() => showRecipes(recipe)}
               key={recipe.id}
             >
+
+            <div className="recipe-card">
+              <h1>{recipe.title}</h1>
+
               <img
                 style={{ display: 'block' }}
                 src={recipe.image}
-                alt={recipe.name}
+                alt={recipe.title}
               />
-              <h1>{recipe.name}</h1>
+              <h1>{recipe.title}</h1>
             </div>
           ))
         : ''}

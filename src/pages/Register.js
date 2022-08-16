@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
+import Nav from '../components/Nav'
+import SideNav from '../components/SideNav'
 
 const Register = () => {
   const [formValues, setFormValues] = useState({
@@ -36,6 +38,10 @@ const Register = () => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
+        <div>
+          <Nav />
+          <SideNav />
+        </div>
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="name">Name</label>
