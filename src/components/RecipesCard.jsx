@@ -58,6 +58,8 @@ const RecipesCard = (props) => {
     window.location.reload()
   }
 
+  console.log(recipe.category)
+
   return (
  <div className='details_page'>
       <div>
@@ -72,9 +74,9 @@ const RecipesCard = (props) => {
           <h1 className='detail'>{recipe.ingredients}</h1>
           <h1 className='details_header2'>Directions:</h1>
           <h1 className='detail'>{recipe.directions}</h1>
-          <h1 className="detail">{recipe.category}</h1>
+          {/* <h1 className='details_header2'>Category:</h1> */}
+          <h1 className='detail'>{recipe.category}</h1>
         </div>
-
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
           <input
