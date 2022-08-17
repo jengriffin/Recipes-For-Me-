@@ -70,7 +70,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="password"
-              value={formValues.passwordDigest.}
+              value={formValues.passwordDigest}
               required
             />
           </div>
