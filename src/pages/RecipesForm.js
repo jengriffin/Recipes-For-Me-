@@ -20,7 +20,7 @@ function RecipeForm() {
     const getRecipe = async () => {
       try {
         let res = await axios.get(`${BASE_URL}/api/recipes/all`)
-        // console.log(res.data)
+        console.log(res.data)
 
         setRecipe(res.data)
       } catch (eer) {}
@@ -29,14 +29,6 @@ function RecipeForm() {
   }, [])
 
   const handleChange = (event) => {
-    const [formValues, setFormValues] = useState({
-      name: '',
-      image: '',
-      ingredients: '',
-      directions: '',
-      category: ''
-    })
-
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 

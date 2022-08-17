@@ -18,6 +18,20 @@
   background-size:contain
 }
 
+.signin {
+  background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain
+}
+
+.about {
+  background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain
+}
+
 .recipes_list {
   background-image: url("https://gdurl.com/lQzR");
   /* background-image: url("https://gdurl.com/qd1J"); */
@@ -145,7 +159,15 @@ width: auto
   margin-bottom: 2px;
   font-size: 48px;
   background-color: transparent;
+}
 
+.recipe_subs {
+  color: #003049;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bolder;
+  margin-bottom: 2px;
+  font-size: 24px;
+  background-color: transparent;
 }
 
 .landing {
