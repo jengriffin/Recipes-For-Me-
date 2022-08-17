@@ -45,7 +45,7 @@ const RecipesCard = (props) => {
     // clear the form
     setFormState(initialState)
     alert('You have successfully updated the recipe!')
-    navigate(`/recipes/${id}`)
+    navigate('/feed')
   }
 
   const deleteRecipe = async () => {
@@ -54,24 +54,24 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
-  const refreshPage= ()=> {
+  const refreshPage = () => {
     window.location.reload()
   }
 
   return (
- <div className='details_page'>
+    <div className="details_page">
       <div>
         <Nav />
         <SideNav />
       </div>
-      <div className='details_grid'>
-        <h1 className='recipe_title'>{recipe.title}</h1>
-        <img className='recipe_card' src={recipe.image} alt="recipe image" />
-        <div className='details_container'>
-          <h1 className='details_header'>Ingredients:</h1>
-          <h1 className='detail'>{recipe.ingredients}</h1>
-          <h1 className='details_header2'>Directions:</h1>
-          <h1 className='detail'>{recipe.directions}</h1>
+      <div className="details_grid">
+        <h1 className="recipe_title">{recipe.title}</h1>
+        <img className="recipe_card" src={recipe.image} alt="recipe image" />
+        <div className="details_container">
+          <h1 className="details_header">Ingredients:</h1>
+          <h1 className="detail">{recipe.ingredients}</h1>
+          <h1 className="details_header2">Directions:</h1>
+          <h1 className="detail">{recipe.directions}</h1>
           <h1 className="detail">{recipe.category}</h1>
         </div>
 
@@ -130,7 +130,7 @@ const RecipesCard = (props) => {
         </form>
 
         <button onClick={deleteRecipe}>Delete</button>
-      </span>
+      </div>
     </div>
   )
 }
