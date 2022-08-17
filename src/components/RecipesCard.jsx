@@ -131,7 +131,7 @@ const RecipesCard = (props) => {
           </button>
         </form>
 
-        <button onClick={deleteRecipe}>Delete</button>
+        <button onClick={deleteRecipe}> Delete</button>
       </div>
     </div>
   )

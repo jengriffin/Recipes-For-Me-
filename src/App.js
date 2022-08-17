@@ -10,7 +10,7 @@ import Recipes from './pages/Recipeslist'
 import Landing from './pages/Landing'
 import './sideNav.css'
 import RecipesCard from './components/RecipesCard'
-import Signin from './pages/Signin'
+import SignIn from './pages/Signin'
 import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
 
@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/" element={<Landing />} />
 
           <Route path="/recipes/:id" element={<RecipesCard />} />
-          <Route path="/signin" element={<Signin />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </main>
     </div>
