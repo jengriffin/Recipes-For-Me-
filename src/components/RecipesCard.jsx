@@ -3,7 +3,8 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-
+import Nav from './Nav'
+import SideNav from './SideNav'
 const RecipesCard = (props) => {
   let navigate = useNavigate()
   const [recipe, setRecipe] = useState('')
@@ -53,9 +54,16 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
+  const refreshPage= ()=> {
+    window.location.reload()
+  }
 
   return (
-    <div className='details_page'>
+ <div className='details_page'>
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       <div className='details_grid'>
         <h1 className='recipe_title'>{recipe.title}</h1>
         <img className='recipe_card' src={recipe.image} alt="recipe image" />
@@ -66,6 +74,7 @@ const RecipesCard = (props) => {
           <h1 className='detail'>{recipe.directions}</h1>
           <h1 className="detail">{recipe.category}</h1>
         </div>
+
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
           <input
@@ -115,7 +124,7 @@ const RecipesCard = (props) => {
             <option value="Vegetarian">Vegetarian</option>
           </select>
 
-          <button id="updateRecipeBtn" type="submit">
+          <button id="updateRecipeBtn" type="submit" onClick={refreshPage}>
             Update Recipe
           </button>
         </form>
