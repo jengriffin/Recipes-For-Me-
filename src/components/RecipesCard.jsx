@@ -130,7 +130,7 @@ const RecipesCard = (props) => {
         </form>
 
         <button onClick={deleteRecipe}>Delete</button>
-      </span>
+      </div>
     </div>
   )
 }
