@@ -6,10 +6,10 @@ import SideNav from '../components/SideNav'
 
 const Register = () => {
   const initialState = {
-    name: '',
     email: '',
-    password: '',
-    confirmPassword: ''
+    username: '',
+    passwordDigest: '',
+    confirmPasswordDigest: ''
   }
 
   const [formValues, setFormValues] = useState({})
@@ -18,15 +18,15 @@ const Register = () => {
   let navigate = useNavigate()
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+    setFormValues({ ...formValues, [e.target.userName]: e.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
-      username: formValues.name,
       email: formValues.email,
-      passwordDigest: formValues.password
+      username: formValues.userName,
+      passwordDigest: formValues.passwordDigest
     })
     setFormValues(initialState)
     navigate('/signin')
@@ -41,17 +41,6 @@ const Register = () => {
         </div>
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="John Smith"
-              value={formValues.name}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
             <label htmlFor="email">Email</label>
             <input
               onChange={handleChange}
@@ -62,6 +51,17 @@ const Register = () => {
               required
             />
           </div>
+          <div className="input-wrapper">
+            <label htmlFor="name">User Name</label>
+            <input
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="John Smith"
+              value={formValues.userName}
+              required
+            />
+          </div>
 
           <div className="input-wrapper">
             <label htmlFor="password">Password</label>
@@ -69,7 +69,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="password"
-              value={formValues.password}
+              value={formValues.passwordDigest.}
               required
             />
           </div>
@@ -86,8 +86,8 @@ const Register = () => {
           <button
             disabled={
               !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
+              (!formValues.passwordDigest &&
+                formValues.confirmPassword === formValues.passwordDigest)
             }
           >
             Sign Up
