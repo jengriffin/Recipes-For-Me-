@@ -40,29 +40,6 @@
   height: 2000px;
 }
 
-.form_container {
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: transparent;
-  height: auto;
-}
-
-
-
-input {
-  background-color: white;
-  margin: 10px;
-  height: 28px;
-}
-
-.submit_button{
-height: 60px;
-width: auto
-}
-
 .sidenav_links {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
@@ -232,3 +209,71 @@ width: auto
 
 }
 
+.form_card {
+  width: auto;
+  height: 700px;
+  text-align: left;
+  margin-left: 17%;
+  font-size: 11px;
+  background-color: transparent;
+}
+.recipe_form {
+  margin-top: -30px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+label {
+  background-color: transparent;
+  margin-top: 26px;
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  color: #003049;
+  margin-left: 15%;
+  font-size: 14px;
+}
+
+input {
+  background-color: white;
+  height: 30px ;
+  width: 190px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 15px;
+  margin-left: -110px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+select {
+  background-color: white;
+  height: 30px ;
+  width: 190px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  white-space: nowrap;
+  margin-left: -110px;
+  margin-top: 15px;
+  margin-right: 50px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: 120px;
+  width: 140px;
+  background-color: white;
+  border: 2px solid #003049
+
+}
+.button2 {
+  
+}
+.update_button {
+  background-color: white;
+  border: 2px solid #003049
+}
