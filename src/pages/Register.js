@@ -3,36 +3,29 @@ import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
-
 const Register = () => {
   const initialState = {
+    name: '',
     email: '',
-    username: '',
-    passwordDigest: '',
-    confirmPasswordDigest: ''
+    password: '',
+    confirmPassword: ''
   }
-
   const [formValues, setFormValues] = useState({})
   console.log(formValues)
-
   let navigate = useNavigate()
-
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.userName]: e.target.value })
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
       userName: formValues.name,
       email: formValues.email,
-      username: formValues.userName,
-      passwordDigest: formValues.passwordDigest
+      password: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signin')
+    navigate('/signup')
   }
-
   return (
     <div className="signin">
       <div className="card-overlay centered">
@@ -41,6 +34,17 @@ const Register = () => {
           <SideNav />
         </div>
         <form className="col" onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <label htmlFor="name">Name</label>
+            <input
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="John Smith"
+              value={formValues.name}
+              required
+            />
+          </div>
           <div className="input-wrapper">
             <label htmlFor="email">Email</label>
             <input
@@ -53,24 +57,13 @@ const Register = () => {
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="name">User Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="John Smith"
-              value={formValues.userName}
-              required
-            />
-          </div>
-
-          <div className="input-wrapper">
             <label htmlFor="password">Password</label>
             <input
               onChange={handleChange}
               type="password"
               name="password"
-              value={formValues.passwordDigest}
+              placeholder="Password"
+              value={formValues.password}
               required
             />
           </div>
@@ -80,6 +73,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="confirmPassword"
+              placeholder="Confirm Password"
               value={formValues.confirmPassword}
               required
             />
@@ -87,8 +81,8 @@ const Register = () => {
           <button
             disabled={
               !formValues.email ||
-              (!formValues.passwordDigest &&
-                formValues.confirmPassword === formValues.passwordDigest)
+              (!formValues.password &&
+                formValues.confirmPassword === formValues.password)
             }
           >
             Sign Up
@@ -98,5 +92,4 @@ const Register = () => {
     </div>
   )
 }
-
 export default Register
