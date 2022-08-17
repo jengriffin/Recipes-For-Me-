@@ -39,6 +39,11 @@ const App = () => {
 
   return (
     <div className="main_app">
+      <Nav
+        authenticated={authenticated}
+        user={user}
+        handleLogOut={handleLogOut}
+      />
       <main>
         <Routes>
           <Route path="/home" element={<Home />} />
