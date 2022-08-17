@@ -3,7 +3,6 @@ import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
-
 const Register = () => {
   const initialState = {
     name: '',
@@ -11,27 +10,22 @@ const Register = () => {
     password: '',
     confirmPassword: ''
   }
-
   const [formValues, setFormValues] = useState({})
   console.log(formValues)
-
   let navigate = useNavigate()
-
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
       userName: formValues.name,
       email: formValues.email,
-      passwordDigest: formValues.password
+      password: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signin')
+    navigate('/signup')
   }
-
   return (
     <div className="signin">
       <div className="card-overlay centered">
@@ -62,7 +56,6 @@ const Register = () => {
               required
             />
           </div>
-
           <div className="input-wrapper">
             <label htmlFor="password">Password</label>
             <input
@@ -99,5 +92,4 @@ const Register = () => {
     </div>
   )
 }
-
 export default Register

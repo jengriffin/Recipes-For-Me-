@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import '../App.css'
+import '../sideNav.css'
 import Nav from './Nav'
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
@@ -77,7 +79,9 @@ const RecipesCard = (props) => {
           {/* <h1 className='details_header2'>Category:</h1> */}
           <h1 className='detail'>{recipe.category}</h1>
         </div>
-        <form onSubmit={handleSubmit}>
+        <div className='form_card'>
+
+        <form className='recipe_form' onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
           <input
             type="text"
@@ -116,6 +120,7 @@ const RecipesCard = (props) => {
             onChange={handleChange}
             value={formState.category}
           >
+            <option value="Default" selected> -Select One- </option>
             <option value="Diabetic Friendly">Diabetic Friendly</option>
             <option value="Gluten Free">Gluten Free</option>
             <option value="Halal">Halal</option>
@@ -125,13 +130,15 @@ const RecipesCard = (props) => {
             <option value="Vegan">Vegan</option>
             <option value="Vegetarian">Vegetarian</option>
           </select>
+            <button className='update_button' type="submit" onClick={refreshPage}>
+              Update Recipe
+            </button>
 
-          <button id="updateRecipeBtn" type="submit" onClick={refreshPage}>
-            Update Recipe
-          </button>
         </form>
 
-        <button onClick={deleteRecipe}> Delete</button>
+        <button onClick={deleteRecipe}>Delete</button>
+        </div>
+
       </div>
     </div>
   )
