@@ -1,15 +1,17 @@
 import { NavLink } from 'react-router-dom'
 import '../sideNav.css'
 
-const Nav =()=>{
+
+const Nav =({ authenticated, user, handleLogOut })=>{
+    let authenticatedOptions
     if (user) {
         authenticatedOptions = (
           <nav>
            
-            <Link to="/feed">Feed</Link>
-            <Link onClick={handleLogOut} to="/">
+            <NavLink to="/feed">Feed</NavLink>
+            <NavLink onClick={handleLogOut} to="/">
               Sign Out
-            </Link>
+            </NavLink>
           </nav>
         )
       }

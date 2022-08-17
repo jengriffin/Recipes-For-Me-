@@ -13,6 +13,7 @@ import RecipesCard from './components/RecipesCard'
 import SignIn from './pages/Signin'
 import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
+import Nav from './components/Nav'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
