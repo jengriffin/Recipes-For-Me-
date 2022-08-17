@@ -42,14 +42,16 @@
   height: auto;
 }
 
-.directions{
-  height: 280px;
-}
+
 
 input {
   background-color: white;
   margin: 10px;
   height: 28px;
+}
+
+.directions{
+  height: 280px;
 }
 
 .submit_button{
