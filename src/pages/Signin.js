@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import Nav from '../components/Nav'
+import SideNav from '../components/SideNav'
 const SignIn = () => {
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
@@ -14,6 +15,10 @@ const SignIn = () => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
+        <div>
+          <Nav />
+          <SideNav />
+        </div>
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="email">Email</label>

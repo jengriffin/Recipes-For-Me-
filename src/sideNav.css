@@ -18,20 +18,6 @@
   background-size:contain
 }
 
-.signin {
-  background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
-  background-position: center;
-  background-size:contain
-}
-
-.about {
-  background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
-  background-position: center;
-  background-size:contain
-}
-
 .recipes_list {
   background-image: url("https://gdurl.com/lQzR");
   /* background-image: url("https://gdurl.com/qd1J"); */
@@ -44,6 +30,14 @@
   /* background-image: url("https://gdurl.com/qd1J"); */
   background-position: center;
   background-size:contain
+}
+
+.details_page {
+  background-image: url("https://gdurl.com/lQzR");
+  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain;
+  height: 2000px;
 }
 
 .form_container {
@@ -62,10 +56,6 @@ input {
   background-color: white;
   margin: 10px;
   height: 28px;
-}
-
-.directions{
-  height: 280px;
 }
 
 .submit_button{
@@ -151,6 +141,12 @@ width: auto
   background-color: transparent;
 }
 
+.details_grid {
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+}
+
 .recipe_title {
   color: #003049;
   text-transform: uppercase;
@@ -161,13 +157,45 @@ width: auto
   background-color: transparent;
 }
 
-.recipe_subs {
-  color: #003049;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bolder;
-  margin-bottom: 2px;
-  font-size: 24px;
+.details_container {
+  background-image: url("https://gdurl.com/lKJW");
+  background-size: cover;
+  width: 66%;
+  height: 700px;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 17%;
+  font-size: 13px;
   background-color: transparent;
+
+}
+
+.details_header {
+  color: #003049;
+  letter-spacing: 3px;
+  padding-top: 120px;
+  padding-left: 60px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 38px;
+  background-color: transparent;
+}
+
+.details_header2 {
+  color: #003049;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  padding-left: 60px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 38px;
+  background-color: transparent;
+}
+
+
+.detail {
+  font-family: 'Courier Prime', monospace;
+  color: #003049;
+  background-color: transparent;
+  padding-left: 100px;
 }
 
 .landing {
