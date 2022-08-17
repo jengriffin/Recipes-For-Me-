@@ -29,7 +29,7 @@ const Register = () => {
       password: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signup')
+    navigate('/signin')
   }
 
   return (

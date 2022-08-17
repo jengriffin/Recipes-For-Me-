@@ -73,16 +73,15 @@ function RecipeForm() {
           name={'ingredients'}
           placeholder={'ingredients'}
         />
-        <input
-          type="text-area"
+        <textarea
           id="directions"
           value={recipe.directions}
           onChange={handleChange}
           name="directions"
-          cols="300"
-          rows="100"
+          cols="100"
+          rows="50"
           placeholder={'directions'}
-        />
+        ></textarea>
         <label for="category">Category:</label>
         <select id="category">
           <option value="Diabetic Friendly">Diabetic Friendly</option>
