@@ -78,7 +78,9 @@ function RecipeForm() {
           id="directions"
           value={recipe.directions}
           onChange={handleChange}
-          name={'directions'}
+          name="directions"
+          cols="300"
+          rows="100"
           placeholder={'directions'}
         />
         <label for="category">Category:</label>
