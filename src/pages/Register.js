@@ -24,9 +24,9 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
-      name: formValues.name,
+      username: formValues.name,
       email: formValues.email,
-      password: formValues.password
+      passwordDigest: formValues.password
     })
     setFormValues(initialState)
     navigate('/signin')
