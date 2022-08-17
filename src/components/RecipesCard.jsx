@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import '../sideNav.css'
-import Nav from './Nav'
+
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
   let navigate = useNavigate()
@@ -65,7 +65,7 @@ const RecipesCard = (props) => {
   return (
     <div className="details_page">
       <div>
-        <Nav />
+        
         <SideNav />
       </div>
       <div className='details_grid'>
@@ -135,8 +135,9 @@ const RecipesCard = (props) => {
             </button>
 
         </form>
-        <button onClick={deleteRecipe}>Delete</button>
+        
         </div>
+        <button onClick={deleteRecipe}>Delete</button>
       </div>
     </div>
   )
