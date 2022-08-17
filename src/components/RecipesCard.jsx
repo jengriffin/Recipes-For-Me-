@@ -3,7 +3,8 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-
+import Nav from './Nav'
+import SideNav from './SideNav'
 const RecipesCard = (props) => {
   let navigate = useNavigate()
   const [recipe, setRecipe] = useState('')
@@ -56,6 +57,10 @@ const RecipesCard = (props) => {
 
   return (
     <div className="">
+      <div>
+        <Nav />
+        <SideNav />
+      </div>
       <span className="recipe_grid">
         <h3 className="recipe_title">{recipe.title}</h3>
         <img className="recipe_card" src={recipe.image} alt="recipe image" />

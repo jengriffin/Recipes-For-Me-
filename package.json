@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,19 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "# Date: 8/10/2022",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jengriffin/Recipes-For-Me-.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jengriffin/Recipes-For-Me-/issues"
-  },
-  "homepage": "https://github.com/jengriffin/Recipes-For-Me-#readme",
-  "keywords": []
-}
+  }}
+  
+ 
