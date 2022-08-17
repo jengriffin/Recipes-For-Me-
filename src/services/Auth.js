@@ -3,7 +3,7 @@ import Client from './api'
 
 export const RegisterUser = async (data) => {
   try {
-    const res = await Client.post(`${BASE_URL}/api/users/create`, data)
+    const res = await Client.post(`${BASE_URL}/auth/register`, data)
     return res.data
   } catch (error) {
     throw error
