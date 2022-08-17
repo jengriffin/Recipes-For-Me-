@@ -26,10 +26,10 @@ const Register = () => {
     await RegisterUser({
       userName: formValues.name,
       email: formValues.email,
-      password: formValues.password
+      passwordDigest: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signup')
+    navigate('/signin')
   }
 
   return (

@@ -58,23 +58,25 @@ const RecipesCard = (props) => {
     window.location.reload()
   }
 
+  console.log(recipe.category)
+
   return (
     <div className="details_page">
       <div>
         <Nav />
         <SideNav />
       </div>
-      <div className="details_grid">
-        <h1 className="recipe_title">{recipe.title}</h1>
-        <img className="recipe_card" src={recipe.image} alt="recipe image" />
-        <div className="details_container">
-          <h1 className="details_header">Ingredients:</h1>
-          <h1 className="detail">{recipe.ingredients}</h1>
-          <h1 className="details_header2">Directions:</h1>
-          <h1 className="detail">{recipe.directions}</h1>
-          <h1 className="detail">{recipe.category}</h1>
+      <div className='details_grid'>
+        <h1 className='recipe_title'>{recipe.title}</h1>
+        <img className='recipe_card' src={recipe.image} alt="recipe image" />
+        <div className='details_container'>
+          <h1 className='details_header'>Ingredients:</h1>
+          <h1 className='detail'>{recipe.ingredients}</h1>
+          <h1 className='details_header2'>Directions:</h1>
+          <h1 className='detail'>{recipe.directions}</h1>
+          {/* <h1 className='details_header2'>Category:</h1> */}
+          <h1 className='detail'>{recipe.category}</h1>
         </div>
-
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
           <input
