@@ -56,7 +56,8 @@ const App = () => {
           <Route path="/" element={<Landing />} />
 
           <Route path="/recipes/:id" element={<RecipesCard />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signin" element= {<SignIn setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated} />
         </Routes>
       </main>
     </div>
