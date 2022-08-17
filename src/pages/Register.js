@@ -24,7 +24,7 @@ const Register = () => {
       password: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signup')
+    navigate('/signin')
   }
   return (
     <div className="signin">
@@ -85,7 +85,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign Up
+            Register
           </button>
         </form>
       </div>
