@@ -59,17 +59,21 @@ const RecipesCard = (props) => {
   }
 
   return (
-    <div className="">
+ <div className='details_page'>
       <div>
         <Nav />
         <SideNav />
       </div>
-      <span className="recipe_grid">
-        <h3 className="recipe_title">{recipe.title}</h3>
-        <img className="recipe_card" src={recipe.image} alt="recipe image" />
-        <h4 className="recipe_subs">{recipe.ingredients}</h4>
-        <h4 className="recipe_subs">{recipe.directions}</h4>
-        <h4 className="recipe_subs">{recipe.category}</h4>
+      <div className='details_grid'>
+        <h1 className='recipe_title'>{recipe.title}</h1>
+        <img className='recipe_card' src={recipe.image} alt="recipe image" />
+        <div className='details_container'>
+          <h1 className='details_header'>Ingredients:</h1>
+          <h1 className='detail'>{recipe.ingredients}</h1>
+          <h1 className='details_header2'>Directions:</h1>
+          <h1 className='detail'>{recipe.directions}</h1>
+          <h1 className="detail">{recipe.category}</h1>
+        </div>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title:</label>
