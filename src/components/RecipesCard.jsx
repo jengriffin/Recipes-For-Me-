@@ -45,6 +45,7 @@ const RecipesCard = (props) => {
         <img className="recipe_card" src={recipe.image} alt="recipe image" />
         <h4 className="recipe_subs">{recipe.ingredients}</h4>
         <h4 className="recipe_subs">{recipe.directions}</h4>
+        <button onClick={deleteRecipe}>Delete</button>
       </span>
     </div>
   )
