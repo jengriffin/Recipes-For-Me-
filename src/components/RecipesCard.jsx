@@ -54,6 +54,9 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
+  const refreshPage= ()=> {
+    window.location.reload()
+  }
 
   return (
     <div className="">
@@ -117,7 +120,7 @@ const RecipesCard = (props) => {
             <option value="Vegetarian">Vegetarian</option>
           </select>
 
-          <button id="updateRecipeBtn" type="submit">
+          <button id="updateRecipeBtn" type="submit" onClick={refreshPage}>
             Update Recipe
           </button>
         </form>
