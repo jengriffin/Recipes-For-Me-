@@ -45,7 +45,7 @@ const RecipesCard = (props) => {
     // clear the form
     setFormState(initialState)
     alert('You have successfully updated the recipe!')
-    navigate(`/recipes/${id}`)
+    navigate('/feed')
   }
 
   const deleteRecipe = async () => {
@@ -54,14 +54,14 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
-  const refreshPage= ()=> {
+  const refreshPage = () => {
     window.location.reload()
   }
 
   console.log(recipe.category)
 
   return (
- <div className='details_page'>
+    <div className="details_page">
       <div>
         <Nav />
         <SideNav />
