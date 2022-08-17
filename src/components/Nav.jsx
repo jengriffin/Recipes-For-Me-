@@ -7,7 +7,7 @@ const Nav =()=>{
         <NavLink className='nav_links' to='/home'>Home</NavLink>
         <NavLink className='nav_links' to='/about'>About</NavLink>
         <img className='header_logo' src='https://gdurl.com/R93j'/>
-        <NavLink className='nav_links' to='/signup'>Sign In</NavLink>
+        <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
         <NavLink className='nav_links' to='/register'>Register</NavLink>
 
      </div>
