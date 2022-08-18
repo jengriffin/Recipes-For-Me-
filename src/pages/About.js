@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import '../App.css'
+import '../sideNav.css'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 const About = () => {
