@@ -3,7 +3,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
+import Nav from '../components/Nav'
+import { Navigate, useNavigate } from 'react-router-dom'
 function RecipeForm() {
+  let navigate = useNavigate()
   const initialState = {
     title: '',
     image: '',
@@ -38,6 +41,7 @@ function RecipeForm() {
     let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
     setFormState(initialState)
+    navigate('/feed')
   }
 
   return (
