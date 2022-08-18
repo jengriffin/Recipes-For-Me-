@@ -15,7 +15,10 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await SignInUser({ email: formValues.email, password: formValues.password })
+    await SignInUser({
+      email: formValues.email,
+      password: formValues.password
+    })
     navigate('/feed')
   }
 

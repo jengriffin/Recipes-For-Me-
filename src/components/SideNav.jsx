@@ -7,7 +7,7 @@ const SideNav =()=>{
     
     return(
     <div className='sidenav'>
-          <div className='sidenav_links'>
+        <div className='sidenav_links'>
         <NavLink className='tab' to='/feed'>All Recipes</NavLink>
         </div>
         <div className='sidenav_links'>

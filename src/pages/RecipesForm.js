@@ -3,8 +3,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
-import { Navigate, useNavigate } from 'react-router-dom'
-function RecipeForm({ user, authenticated }) {
+import { useNavigate } from 'react-router-dom'
+
+const RecipeForm = ({ user, authenticated }) => {
   let navigate = useNavigate()
   const initialState = {
     title: '',
@@ -21,8 +22,6 @@ function RecipeForm({ user, authenticated }) {
     const getRecipe = async () => {
       try {
         let res = await Client.get(`${BASE_URL}/api/recipes/all`)
-        console.log(res.data)
-
         setRecipe(res.data)
       } catch (eer) {}
     }
@@ -35,10 +34,7 @@ function RecipeForm({ user, authenticated }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-
-    // console.log(formState)
     let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
-    console.log(res)
     setFormState(initialState)
     navigate('/feed')
   }
@@ -100,8 +96,8 @@ function RecipeForm({ user, authenticated }) {
     </div>
   ) : (
     <div className="protected">
-      <h3>Oops! You must be signed to add a recipe!</h3>
-      <button onClick={() => navigate('/signin')}>Sign In</button>
+      <h2>You must be signed in to add a recipe!</h2>
+      <button onClick={() => navigate('/signin')}>Sign in</button>
     </div>
   )
 }
