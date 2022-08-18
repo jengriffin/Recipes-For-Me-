@@ -5,7 +5,6 @@ import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 import '../App.css'
 import '../sideNav.css'
-
 const Register = () => {
   const initialState = {
     name: '',
@@ -13,27 +12,22 @@ const Register = () => {
     password: '',
     confirmPassword: ''
   }
-
   const [formValues, setFormValues] = useState({})
   console.log(formValues)
-
   let navigate = useNavigate()
-
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
       userName: formValues.name,
       email: formValues.email,
-      passwordDigest: formValues.password
+      password: formValues.password
     })
     setFormValues(initialState)
     navigate('/signin')
   }
-
   return (
     <div className="signin">
       <div className="card-overlay centered">
@@ -64,13 +58,13 @@ const Register = () => {
               required
             />
           </div>
-
           <div className="input-wrapper">
             <label htmlFor="password">Password</label>
             <input
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="Password"
               value={formValues.password}
               required
             />
@@ -81,6 +75,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="confirmPassword"
+              placeholder="Confirm Password"
               value={formValues.confirmPassword}
               required
             />
@@ -92,12 +87,11 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign Up
+            Register
           </button>
         </form>
       </div>
     </div>
   )
 }
-
 export default Register
