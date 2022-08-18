@@ -35,8 +35,8 @@ const Register = () => {
       <div className="forms_section_register">
         <h1 className="forms_header">Register New Account</h1>
         <form onSubmit={handleSubmit}>
-          <div className="form_container_sign_in">
-            <div className="input1_sign_in">
+          <div className="form_container_register">
+            <div className="input1_register">
               <label htmlFor="name">Name: </label>
               <input
                 onChange={handleChange}
@@ -47,7 +47,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="input1_sign_in">
+            <div className="input1_register">
               <label htmlFor="email">Email: </label>
               <input
                 onChange={handleChange}
@@ -58,7 +58,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="input1_sign_in">
+            <div className="input1_register">
               <label htmlFor="password">Password: </label>
               <input
                 onChange={handleChange}
@@ -69,7 +69,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="input1_sign_in">
+            <div className="input1_register">
               <label htmlFor="confirmPassword">Confirm Password: </label>
               <input
                 onChange={handleChange}

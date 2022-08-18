@@ -44,75 +44,76 @@ const RecipeForm = ({ user, authenticated }) => {
       <div>
         <SideNav />
       </div>
+      <div className="forms_section_new_recipe">
+        <h1 className="forms_header">Add A New Recipe: </h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form_container">
+            <div className="input1">
+              <label>Title: </label>
+              <input
+                type="text"
+                id="title"
+                value={recipe.title}
+                onChange={handleChange}
+                name={'title'}
+                placeholder={'title'}
+              />
+            </div>
 
-      <h1 className="forms_header">Add A New Recipe: </h1>
+            <div className="input1">
+              <label>Image Link: </label>
+              <input
+                type="text"
+                id="image"
+                value={recipe.image}
+                onChange={handleChange}
+                name={'image'}
+                placeholder={'image'}
+              />
+            </div>
 
-      <form onSubmit={handleSubmit}>
-        <div className="form_container_sign_in">
-          <div className="input1_sign_in">
-            <label>Title: </label>
-            <input
-              type="text"
-              id="title"
-              value={recipe.title}
-              onChange={handleChange}
-              name={'title'}
-              placeholder={'title'}
-            />
+            <div className="input1">
+              <label>Ingredients: </label>
+              <textarea
+                type="text"
+                id="ingredients"
+                value={recipe.ingredients}
+                onChange={handleChange}
+                name={'ingredients'}
+                placeholder={'ingredients'}
+              />
+            </div>
+
+            <div className="input1">
+              <label>Directions: </label>
+              <textarea
+                id="directions"
+                value={recipe.directions}
+                onChange={handleChange}
+                name="directions"
+                placeholder={'directions'}
+              />
+            </div>
+
+            <div className="input1">
+              <label>Category: </label>
+              <select id="category">
+                <option value="Diabetic Friendly">Diabetic Friendly</option>
+                <option value="Gluten Free">Gluten Free</option>
+                <option value="Halal">Halal</option>
+                <option value="Kosher">Kosher</option>
+                <option value="Lactose Free">Lactose Free</option>
+                <option value="Low Sodium">Low Sodium</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Vegetarian">Vegetarian</option>
+              </select>
+            </div>
+            <div className="button1">
+              <button type="submit">Submit</button>
+            </div>
           </div>
-
-          <div className="input1_sign_in">
-            <label>Image Link: </label>
-            <input
-              type="text"
-              id="image"
-              value={recipe.image}
-              onChange={handleChange}
-              name={'image'}
-              placeholder={'image'}
-            />
-          </div>
-
-          <div className="input1_sign_in">
-            <label>Ingredients: </label>
-            <textarea
-              type="text"
-              id="ingredients"
-              value={recipe.ingredients}
-              onChange={handleChange}
-              name={'ingredients'}
-              placeholder={'ingredients'}
-            />
-          </div>
-
-          <div className="input1_sign_in">
-            <label>Directions: </label>
-            <textarea
-              id="directions"
-              value={recipe.directions}
-              onChange={handleChange}
-              name="directions"
-              placeholder={'directions'}
-            />
-          </div>
-
-          <div className="input1_sign_in">
-            <label>Category: </label>
-            <label for="category">Category:</label>
-            <select id="category">
-              <option value="Diabetic Friendly">Diabetic Friendly</option>
-              <option value="Gluten Free">Gluten Free</option>
-              <option value="Halal">Halal</option>
-              <option value="Kosher">Kosher</option>
-              <option value="Lactose Free">Lactose Free</option>
-              <option value="Low Sodium">Low Sodium</option>
-              <option value="Vegan">Vegan</option>
-              <option value="Vegetarian">Vegetarian</option>
-            </select>
-          </div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   ) : (
     <div className="new_recipe">
