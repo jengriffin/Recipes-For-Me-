@@ -49,7 +49,15 @@ const App = () => {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/feed" element={<Recipes />} />
+          <Route
+            path="/feed"
+            element={
+              <Recipes
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
           <Route path="/register" element={<Register />} />
           <Route path="/recipeform" element={<RecipeForm />} />
 

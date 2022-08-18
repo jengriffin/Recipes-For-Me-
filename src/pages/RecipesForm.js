@@ -1,8 +1,8 @@
-import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
+import Client from '../services/api'
 function RecipeForm() {
   const initialState = {
     title: '',
@@ -18,7 +18,7 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/recipes/all`)
+        let res = await Client.get(`${BASE_URL}/api/recipes/all`)
         console.log(res.data)
 
         setRecipe(res.data)
@@ -34,8 +34,8 @@ function RecipeForm() {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    // console.log(formState)
-    let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
+    console.log(formState)
+    let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
     setFormState(initialState)
   }
