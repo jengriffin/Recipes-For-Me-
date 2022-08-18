@@ -5,7 +5,7 @@ import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
 import { useNavigate } from 'react-router-dom'
 
-const RecipeForm({ user, authenticated }) {
+const RecipeForm=({ user, authenticated }) {
   let navigate = useNavigate()
   const initialState = {
     title: '',
