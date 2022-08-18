@@ -1,15 +1,17 @@
 import { NavLink } from 'react-router-dom'
 import '../sideNav.css'
+import { useEffect } from 'react'
 
 
 const Nav =({ authenticated, user, handleLogOut })=>{
     let authenticatedOptions
     if (user) {
         authenticatedOptions = (
-          <div>
-            <NavLink className='nav_links' to="/feed">Feed</NavLink>
-            <NavLink className='nav_links' onClick={handleLogOut} to="/">
-              Sign Out
+
+        <nav>
+            <NavLink to="/feed">Feed</NavLink>
+            <NavLink onClick={handleLogOut} to="/">
+            Sign Out
             </NavLink>
           </div>
         )
