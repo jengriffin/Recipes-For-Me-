@@ -56,9 +56,9 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
-  const refreshPage = () => {
-    window.location.reload()
-  }
+  // const refreshPage = () => {
+  //   window.location.reload()
+  // }
 
   console.log(recipe.category)
 
@@ -130,7 +130,7 @@ const RecipesCard = (props) => {
             <option value="Vegan">Vegan</option>
             <option value="Vegetarian">Vegetarian</option>
           </select>
-            <button className='update_button' type="submit" onClick={refreshPage}>
+             <button className='update_button' type="submit" >
               Update Recipe
             </button>
 
