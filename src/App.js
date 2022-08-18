@@ -53,7 +53,12 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route
             path="/recipeform"
-            element={<RecipeForm user={user} authenticated={authenticated} />}
+            element={
+              <RecipeForm
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
           />
 
           <Route path="/" element={<Landing />} />

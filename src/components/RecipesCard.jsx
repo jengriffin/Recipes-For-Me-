@@ -148,11 +148,13 @@ const RecipesCard = (props) => {
             </div>
             </div>
         </form>
+
         <div className='button2'>
             <button onClick={deleteRecipe}>Delete Recipe</button>
           </div>
           </div>
         </div>
+
     </div>
   )
 }

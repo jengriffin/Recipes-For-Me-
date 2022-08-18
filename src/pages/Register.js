@@ -62,7 +62,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="password"
               value={formValues.password}
               required
             />
@@ -73,7 +73,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="confirmPassword"
-              placeholder="Confirm Password"
+              placeholder="confirm password"
               value={formValues.confirmPassword}
               required
             />
