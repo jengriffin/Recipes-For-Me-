@@ -60,9 +60,9 @@ const RecipesCard = (props) => {
   return (
     <div className="details_page">
       <div>
-        
         <SideNav />
       </div>
+
       <div className='details_grid'>
         <h1 className='recipe_title'>{recipe.title}</h1>
         <img className='recipe_card' src={recipe.image} alt="recipe image" />
@@ -74,10 +74,11 @@ const RecipesCard = (props) => {
           <h1 className='detail'>{recipe.category}</h1>
         </div>
 
-<div className='forms_section'>
-        <h1 className='forms_header'>Edit this Recipe</h1> 
+        <div className='forms_section'>
+         <h1 className='forms_header'>Edit this Recipe</h1> 
         <form onSubmit={handleSubmit}>
         <div className='form_container'>
+
           <div className='input1'>
           <label htmlFor="title">Title:</label>
           <input

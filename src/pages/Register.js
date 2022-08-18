@@ -27,65 +27,71 @@ const Register = () => {
     navigate('/signin')
   }
   return (
-    <div className="signin">
-      <div className="card-overlay centered">
-        <div>
-          <SideNav />
-        </div>
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="John Smith"
-              value={formValues.name}
-              required
-            />
+    <div className="register">
+      <div>
+        <SideNav />
+      </div>
+
+      <div className="forms_section_register">
+        <h1 className="forms_header">Register New Account</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form_container_sign_in">
+            <div className="input1_sign_in">
+              <label htmlFor="name">Name: </label>
+              <input
+                onChange={handleChange}
+                name="name"
+                type="text"
+                placeholder="John Smith"
+                value={formValues.name}
+                required
+              />
+            </div>
+            <div className="input1_sign_in">
+              <label htmlFor="email">Email: </label>
+              <input
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="example@example.com"
+                value={formValues.email}
+                required
+              />
+            </div>
+            <div className="input1_sign_in">
+              <label htmlFor="password">Password: </label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <div className="input1_sign_in">
+              <label htmlFor="confirmPassword">Confirm Password: </label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                value={formValues.confirmPassword}
+                required
+              />
+            </div>
+            <div className="button_sign_in">
+              <button
+                disabled={
+                  !formValues.email ||
+                  (!formValues.password &&
+                    formValues.confirmPassword === formValues.password)
+                }
+              >
+                Register
+              </button>
+            </div>
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              placeholder="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="confirmPassword"
-              placeholder="confirm password"
-              value={formValues.confirmPassword}
-              required
-            />
-          </div>
-          <button
-            disabled={
-              !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
-            }
-          >
-            Register
-          </button>
         </form>
       </div>
     </div>

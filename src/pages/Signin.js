@@ -24,35 +24,41 @@ const SignIn = () => {
 
   return (
     <div className="sign_in">
-      <div className="card-overlay centered">
-        <div>
-          <SideNav />
-        </div>
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
+      <div>
+        <SideNav />
+      </div>
+
+      <div className="forms_section_sign_in">
+        <h1 className="forms_header">Please Sign In</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form_container_sign_in">
+            <div className="input1_sign_in">
+              <label htmlFor="email">Email: </label>
+              <input
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="example@example.com"
+                value={formValues.email}
+                required
+              />
+            </div>
+            <div className="input1_sign_in">
+              <label htmlFor="password">Password: </label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <div className="button_sign_in">
+              <button disabled={!formValues.email || !formValues.password}>
+                Sign In
+              </button>
+            </div>
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <button disabled={!formValues.email || !formValues.password}>
-            Sign In
-          </button>
         </form>
       </div>
     </div>
