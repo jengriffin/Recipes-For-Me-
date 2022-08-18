@@ -28,7 +28,7 @@ const SignIn = () => {
 
   return (
     <div className="sign_in">
-      <div>
+      <div className="buffer">
         <SideNav />
       </div>
 

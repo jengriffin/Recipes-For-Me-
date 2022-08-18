@@ -6,22 +6,24 @@ const Nav =({ authenticated, user, handleLogOut })=>{
         authenticatedOptions = (
 
         <div className='pub_opts'>
-            <NavLink className='nav_links' to="/feed">Feed /</NavLink>
-            <NavLink className='nav_links' onClick={handleLogOut} to="/">
+            <span><NavLink className='nav_links' to="/feed">Feed</NavLink></span>
+            <span><NavLink className='nav_links' onClick={handleLogOut} to="/">
             Sign Out
-            </NavLink>
+            </NavLink></span>
+            
         </div>
         )
     }
     const publicOptions = (
         <div className='pub_opts'>
-            <NavLink className='nav_links' to='/signin'>Sign In /</NavLink>
-            <NavLink className='nav_links' to='/register'> Register</NavLink>
+            <span><NavLink className='nav_links' to='/signin'>Sign In</NavLink></span>
+           <span><NavLink className='nav_links' to='/register'>Register</NavLink></span>
+            
         </div>
     )
 
     const staticOptions = (
-        <div className='pub_opts'>
+        <div className='pub_opts2'>
             <span>
             <NavLink className='nav_links' to='/home'>Home</NavLink>
             </span>
