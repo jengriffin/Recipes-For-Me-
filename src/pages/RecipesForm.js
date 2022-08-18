@@ -101,13 +101,8 @@ function RecipeForm({ user, authenticated }) {
     </div>
   ) : (
     <div className="protected">
-<<<<<<< HEAD
       <h2>You must be signed in to add a recipe!</h2>
       <button onClick={() => navigate('/signin')}>Sign in</button>
-=======
-      <h3>Oops! You must be signed to add a recipe!</h3>
-      <button onClick={() => navigate('/signin')}>Sign In</button>
->>>>>>> d2b6dd55dee1aae24a0d8142f8a731d20df05ba6
     </div>
   )
 }
