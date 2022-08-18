@@ -29,7 +29,7 @@ const SignIn = () => {
         <h1 className="forms_header">Please Sign In</h1>
         <form onSubmit={handleSubmit}>
           <div className="form_container_sign_in">
-            <div className="input1_sign_in">
+            <div className="new_email">
               <label htmlFor="email">Email: </label>
               <input
                 onChange={handleChange}
