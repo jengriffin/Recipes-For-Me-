@@ -60,7 +60,7 @@ const RecipesCard = (props) => {
     window.location.reload()
   }
 
-  console.log(recipe.category)
+  // console.log(recipe.category)
 
   return (
     <div className="details_page">
