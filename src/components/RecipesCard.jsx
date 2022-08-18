@@ -56,9 +56,9 @@ const RecipesCard = (props) => {
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
-  // const refreshPage = () => {
-  //   window.location.reload()
-  // }
+  const refreshPage = () => {
+    window.location.reload()
+  }
 
   console.log(recipe.category)
 
