@@ -22,8 +22,8 @@ const SignIn = () => {
       email: formValues.email,
       password: formValues.password
     })
-    refreshPage()
     navigate('/feed')
+    refreshPage()
   }
 
   return (
