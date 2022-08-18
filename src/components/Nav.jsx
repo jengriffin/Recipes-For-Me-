@@ -7,7 +7,7 @@ const Nav =({ authenticated, user, handleLogOut })=>{
     let authenticatedOptions
     if (user) {
         authenticatedOptions = (
-<div>
+<div className='pub_opts'>
 
             <NavLink className='nav_links' to="/feed">Feed</NavLink>
             <NavLink className='nav_links' onClick={handleLogOut} to="/">
