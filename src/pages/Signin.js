@@ -21,9 +21,6 @@ const SignIn = () => {
     })
     navigate('/feed')
   }
-  const refreshPage = () => {
-    window.location.reload()
-  }
 
   return (
     <div className="sign_in">
@@ -53,10 +50,7 @@ const SignIn = () => {
               required
             />
           </div>
-          <button
-            disabled={!formValues.email || !formValues.password}
-            onClick={refreshPage}
-          >
+          <button disabled={!formValues.email || !formValues.password}>
             Sign In
           </button>
         </form>
