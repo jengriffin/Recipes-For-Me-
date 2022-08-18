@@ -112,6 +112,12 @@
   margin: 0 0 20px 0;
 }
 
+.pub_opts {
+  background-color: #003049;
+  margin-top: 150px;
+  font-size: 20px; 
+}
+
 .nav_links {
   margin-top: 150px;
   font-size: 20px;  
