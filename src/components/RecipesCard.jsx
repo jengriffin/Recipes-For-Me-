@@ -1,10 +1,10 @@
 import { BASE_URL } from '../globals'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import '../sideNav.css'
+import Client from '../services/api'
 
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
@@ -25,7 +25,7 @@ const RecipesCard = (props) => {
   useEffect(() => {
     const selectedRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/recipes/view/${id}`)
+        let res = await Client.get(`${BASE_URL}/api/recipes/view/${id}`)
         console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {
@@ -41,18 +41,14 @@ const RecipesCard = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // do something with the data in the component state
-    let res = await axios.put(`${BASE_URL}/api/recipes/${id}`, formState)
-    console.log(res)
-    // clear the form
+    let res = await Client.put(`${BASE_URL}/api/recipes/${id}`, formState)
     setFormState(initialState)
     alert('You have successfully updated the recipe!')
     navigate('/feed')
   }
 
   const deleteRecipe = async () => {
-    // console.log(id)
-    let res = await axios.delete(`${BASE_URL}/api/recipes/${id}`, formState)
+    let res = await Client.delete(`${BASE_URL}/api/recipes/${id}`, formState)
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
@@ -60,7 +56,6 @@ const RecipesCard = (props) => {
     window.location.reload()
   }
 
-  console.log(recipe.category)
 
   return (
     <div className="details_page">
@@ -76,7 +71,6 @@ const RecipesCard = (props) => {
           <h1 className='detail'>{recipe.ingredients}</h1>
           <h1 className='details_header2'>Directions:</h1>
           <h1 className='detail'>{recipe.directions}</h1>
-          {/* <h1 className='details_header2'>Category:</h1> */}
           <h1 className='detail'>{recipe.category}</h1>
         </div>
 
@@ -151,11 +145,13 @@ const RecipesCard = (props) => {
             </div>
             </div>
         </form>
+
         <div className='button2'>
             <button onClick={deleteRecipe}>Delete Recipe</button>
           </div>
           </div>
         </div>
+
     </div>
   )
 }

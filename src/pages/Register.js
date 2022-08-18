@@ -12,7 +12,6 @@ const Register = () => {
     confirmPassword: ''
   }
   const [formValues, setFormValues] = useState({})
-  console.log(formValues)
   let navigate = useNavigate()
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
@@ -62,7 +61,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="password"
               value={formValues.password}
               required
             />
@@ -73,7 +72,7 @@ const Register = () => {
               onChange={handleChange}
               type="password"
               name="confirmPassword"
-              placeholder="Confirm Password"
+              placeholder="confirm password"
               value={formValues.confirmPassword}
               required
             />

@@ -28,20 +28,3 @@ a:visited {
   background-color:#003049 ;
   border-radius: 100%;
 }
-
-/* form button {
-  background-color: var(--primary-button-hover);
-  margin: 1em 0;
-  color: var(--link-color-secondary);
-  align-self: center;
-  width: 100%;
-}
-
-form button:hover {
-  opacity: 0.7;
-}
-
-form button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-} */

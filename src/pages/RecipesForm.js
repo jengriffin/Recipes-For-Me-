@@ -1,9 +1,12 @@
-import axios from 'axios'
+import Client from '../services/api'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
-function RecipeForm() {
+import { useNavigate } from 'react-router-dom'
+
+const RecipeForm = ({ user, authenticated }) => {
+  let navigate = useNavigate()
   const initialState = {
     title: '',
     image: '',
@@ -18,9 +21,7 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/recipes/all`)
-        console.log(res.data)
-
+        let res = await Client.get(`${BASE_URL}/api/recipes/all`)
         setRecipe(res.data)
       } catch (eer) {}
     }
@@ -33,14 +34,12 @@ function RecipeForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-
-    // console.log(formState)
-    let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
-    console.log(res)
+    let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     setFormState(initialState)
+    navigate('/feed')
   }
 
-  return (
+  return user && authenticated ? (
     <div className="form">
       <div>
         <SideNav />
@@ -94,6 +93,11 @@ function RecipeForm() {
 
         <button type="submit">Submit</button>
       </form>
+    </div>
+  ) : (
+    <div className="protected">
+      <h2>You must be signed in to add a recipe!</h2>
+      <button onClick={() => navigate('/signin')}>Sign in</button>
     </div>
   )
 }
