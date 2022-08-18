@@ -8,7 +8,7 @@ const Nav =({ authenticated, user, handleLogOut })=>{
     if (user) {
         authenticatedOptions = (
 
-        <nav>
+        <div>
             <NavLink to="/feed">Feed</NavLink>
             <NavLink onClick={handleLogOut} to="/">
             Sign Out
