@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom'
 import '../sideNav.css'
-import { useEffect } from 'react'
 const Nav =({ authenticated, user, handleLogOut })=>{
     let authenticatedOptions
     if (user) {
