@@ -12,6 +12,9 @@ const SignIn = () => {
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
+  const refreshPage = () => {
+    window.location.reload()
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,11 +22,8 @@ const SignIn = () => {
       email: formValues.email,
       password: formValues.password
     })
+    refreshPage()
     navigate('/feed')
-  }
-
-  const refreshPage = () => {
-    window.location.reload()
   }
 
   return (
@@ -58,10 +58,7 @@ const SignIn = () => {
               />
             </div>
             <div className="button_sign_in">
-              <button
-                disabled={!formValues.email || !formValues.password}
-                onClick={refreshPage}
-              >
+              <button disabled={!formValues.email || !formValues.password}>
                 Sign In
               </button>
             </div>
