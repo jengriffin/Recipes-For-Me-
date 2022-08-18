@@ -1,28 +1,26 @@
 import { NavLink } from 'react-router-dom'
 import '../sideNav.css'
 import { useEffect } from 'react'
-
-
 const Nav =({ authenticated, user, handleLogOut })=>{
     let authenticatedOptions
     if (user) {
         authenticatedOptions = (
-<div className='pub_opts'>
 
+        <div className='pub_opts'>
             <NavLink className='nav_links' to="/feed">Feed</NavLink>
             <NavLink className='nav_links' onClick={handleLogOut} to="/">
-              Sign Out
+            Sign Out
 
             </NavLink>
-          </div>
+        </div>
         )
     }
-      const publicOptions = (
+    const publicOptions = (
         <div className='pub_opts'>
         <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
         <NavLink className='nav_links' to='/register'>Register</NavLink>
         </div>
-      )
+    )
     return(
     <div className='navbar_container'>
         <NavLink className='nav_links' to='/home'>Home</NavLink>
