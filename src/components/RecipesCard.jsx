@@ -1,10 +1,10 @@
 import { BASE_URL } from '../globals'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import '../sideNav.css'
+import Client from '..services/api'
 
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
@@ -25,7 +25,7 @@ const RecipesCard = (props) => {
   useEffect(() => {
     const selectedRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/recipes/view/${id}`)
+        let res = await Client.get(`${BASE_URL}/api/recipes/view/${id}`)
         console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {
@@ -42,7 +42,7 @@ const RecipesCard = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     // do something with the data in the component state
-    let res = await axios.put(`${BASE_URL}/api/recipes/${id}`, formState)
+    let res = await Client.put(`${BASE_URL}/api/recipes/${id}`, formState)
     console.log(res)
     // clear the form
     setFormState(initialState)
@@ -52,7 +52,7 @@ const RecipesCard = (props) => {
 
   const deleteRecipe = async () => {
     // console.log(id)
-    let res = await axios.delete(`${BASE_URL}/api/recipes/${id}`, formState)
+    let res = await Client.delete(`${BASE_URL}/api/recipes/${id}`, formState)
     alert('You have successfully deleted the recipe!')
     navigate('/feed')
   }
