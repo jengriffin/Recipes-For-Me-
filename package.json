@@ -37,19 +37,4 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "# Date: 8/10/2022",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jengriffin/Recipes-For-Me-.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jengriffin/Recipes-For-Me-/issues"
-  },
-  "homepage": "https://github.com/jengriffin/Recipes-For-Me-#readme"
-}
+  }
