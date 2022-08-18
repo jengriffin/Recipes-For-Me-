@@ -12,14 +12,9 @@ const Nav =({ authenticated, user, handleLogOut })=>{
             <NavLink className='nav_links' onClick={handleLogOut} to="/">
               Sign Out
             </NavLink>
-            <NavLink to="/feed">Feed</NavLink>
-            <NavLink onClick={handleLogOut} to="/">
-            Sign Out
-            </NavLink>
           </div>
         )
     }
-
       const publicOptions = (
         <div className='pub_opts'>
         <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
