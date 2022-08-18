@@ -256,6 +256,19 @@
   box-shadow: 6px 0 15px #2a2a2a;
 }
 
+.forms_section_new_recipe{
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  height: 496px;
+  width: 550px;
+  border: 3px solid #003049;
+  background-color: #ffffeb;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #2a2a2a;
+}
+
 .forms_section_register{
   background-color: transparent;
   margin-left: auto;
@@ -303,6 +316,40 @@
   margin-top: 15px;
   padding-top: 40px;
 }
+
+.form_container_register {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  justify-content: center;
+  justify-items:flex-end;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 40px;
+}
+
+.input1_register label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin: 5px 5px 5px auto;
+}
+
+.input1_register input {
+  background-color: white;
+  height: 24px;
+  width: 180px;
+  margin: 50px auto 15px auto;
+  }
+
+
+
+
+
+
 
 form {
   background-color: transparent;
@@ -423,6 +470,8 @@ border: 2px solid black;
   margin-left: auto;
   margin-top: 4px;
 }
+
+
 
 .button_sign_in {
   background-color: transparent;
