@@ -13,8 +13,7 @@ const Nav =({ authenticated, user, handleLogOut })=>{
             </NavLink>
           </div>
         )
-      }
-    
+    }
       const publicOptions = (
         <div className='pub_opts'>
         <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
@@ -22,7 +21,7 @@ const Nav =({ authenticated, user, handleLogOut })=>{
         </div>
       )
     return(
-     <div className='navbar_container'>
+    <div className='navbar_container'>
         <NavLink className='nav_links' to='/home'>Home</NavLink>
         <NavLink className='nav_links' to='/about'>About</NavLink>
         <img className='header_logo' src='https://gdurl.com/R93j'/>
