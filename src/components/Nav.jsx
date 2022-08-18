@@ -8,20 +8,20 @@ const Nav =({ authenticated, user, handleLogOut })=>{
     if (user) {
         authenticatedOptions = (
 
-        <nav>
+        <div>
             <NavLink to="/feed">Feed</NavLink>
             <NavLink onClick={handleLogOut} to="/">
             Sign Out
             </NavLink>
-          </div>
+        </div>
         )
     }
-      const publicOptions = (
+    const publicOptions = (
         <div className='pub_opts'>
         <NavLink className='nav_links' to='/signin'>Sign In</NavLink>
         <NavLink className='nav_links' to='/register'>Register</NavLink>
         </div>
-      )
+    )
     return(
     <div className='navbar_container'>
         <NavLink className='nav_links' to='/home'>Home</NavLink>
