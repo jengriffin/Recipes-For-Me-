@@ -3,7 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function RecipeForm({ user, authenticated }) {
   let navigate = useNavigate()
@@ -36,8 +36,6 @@ function RecipeForm({ user, authenticated }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-
-    // console.log(formState)
     let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
     setFormState(initialState)
