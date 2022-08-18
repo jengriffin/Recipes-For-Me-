@@ -1,8 +1,8 @@
 import '../App.css'
 import '../sideNav.css'
 
-import { Route, Router } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+// import { Route, Router } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import SideNav from '../components/SideNav'
 
 const Home = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
+// import ReactDOM from 'react-dom/client'
+// import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import RecipeForm from './pages/RecipesForm'
 import Register from './pages/Register'
