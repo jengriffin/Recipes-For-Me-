@@ -54,10 +54,7 @@ const App = () => {
           <Route
             path="/recipeform"
             element={
-              <RecipeForm
-                setUser={setUser}
-                toggleAuthenticated={toggleAuthenticated}
-              />
+              <RecipeForm setUser={User} toggleAuthenticated={Authenticated} />
             }
           />
 
