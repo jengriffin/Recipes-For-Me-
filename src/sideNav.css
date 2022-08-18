@@ -36,34 +36,44 @@
 .home {
   background-image: url("https://gdurl.com/lQzR");
   background-position: center;
-  background-size:contain
-}
-
-.recipes_list {
-  background-image: url("https://gdurl.com/lQzR");
-  background-position: center;
-  background-size:contain
-}
-
-.about {
-  background-image: url("https://gdurl.com/lQzR");
-  background-position: center;
-  background-size:contain
+  background-size:contain;
+  height: 1200px;
 }
 
 .sign_in {
   background-image: url("https://gdurl.com/lQzR");
   background-position: center;
-  background-size:contain
+  background-size:contain;
+  height: 1200px;
 }
 
-.signin {
+.register {
   background-image: url("https://gdurl.com/lQzR");
   background-position: center;
-  background-size:contain
+  background-size:contain;
+  height: 1200px;
 }
 
-.form {
+.recipes_list {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain;
+}
+
+.list_all {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain;
+}
+
+.new_recipe {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain;
+  height: 1200px;
+}
+
+.about {
   background-image: url("https://gdurl.com/lQzR");
   background-position: center;
   background-size:contain
@@ -109,7 +119,6 @@
   justify-content: space-around;
   font-size: 36;
   border-bottom: 3px solid #D95830;
-  margin: 0 0 20px 0;
 }
 
 .pub_opts {
@@ -120,13 +129,16 @@
 
 .nav_links {
   margin-top: 150px;
-  font-size: 20px;  
+  font-size: 24px;
+  background-color: #003049;  
 }
 
 .food {
   width: 66%;
   max-height: 336px;
-  margin: 35px auto 35px auto ;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
   object-fit: cover;
   border: 3px solid #003049;
@@ -164,7 +176,18 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: 'League Gothic', sans-serif;
-  margin: auto auto 2px auto;
+  margin: 15px auto 2px auto;
+  font-size: 48px;
+  background-color: transparent;
+}
+
+.home_title {
+  color: #003049;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'League Gothic', sans-serif;
+  margin: 0px auto 2px auto;
+  padding-top: 15px;
   font-size: 48px;
   background-color: transparent;
 }
@@ -220,15 +243,41 @@
   box-shadow: 6px 0 15px #2a2a2a;
 }
 
+.forms_section_sign_in{
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  height: 306px;
+  width: 550px;
+  border: 3px solid #003049;
+  background-color: #ffffeb;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #2a2a2a;
+}
+
+.forms_section_register{
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  height: 556px;
+  width: 590px;
+  border: 3px solid #003049;
+  background-color: #ffffeb;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #2a2a2a;
+}
+
 .forms_header {
-  padding-top: 110px;
   color: #003049;
   letter-spacing: 3px;
   font-family: 'Courier Prime', monospace;
   font-size: 36px;
   background-color: transparent;
-  margin-top: -85px;
+  margin-top: -10px;
   padding-bottom: 10px;
+  padding-left: 20px;
   border-bottom: 3px solid #003049;
 }
 
@@ -242,6 +291,19 @@
   margin: auto;
 }
 
+.form_container_sign_in {
+  align-items: center;
+  display: grid;
+  grid-template-rows: [title] 16.6% [image] 16.6% [ingredients] 16.6% [directions] 16.6% [category] 16.6% [button];
+  justify-content: center;
+  justify-items:flex-end;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 40px;
+}
+
 form {
   background-color: transparent;
   margin: -30px auto auto auto;
@@ -251,6 +313,26 @@ form {
   padding: 6px;
   background-color: transparent;
 }
+
+.input1_sign_in {
+  padding: 6px;
+  background-color: transparent;
+}
+
+.input1_sign_in label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin: 5px 5px 5px auto;
+}
+
+.input1_sign_in input {
+  background-color: white;
+  height: 24px;
+  width: 180px;
+  margin: 50px auto 15px auto;
+  }
 
 .input2 {
   padding: 6px;
@@ -312,6 +394,19 @@ border: 2px solid black;
   margin-right: auto;
   margin-left: auto;
   margin-top: 4px;
+}
+
+.button_sign_in {
+  background-color: transparent;
+  padding-top: 40px;
+  margin: auto;
+}
+
+.button_sign_in button {
+  background-color: white;
+  font-weight: bold;
+  height: 48px;
+  width: 100px;
 }
 
 .button2 {
