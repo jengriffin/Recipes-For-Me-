@@ -12,12 +12,19 @@ const SignIn = () => {
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    await SignInUser({ email: formValues.email, password: formValues.password })
-    navigate('/feed')
-  }
+  useEffect(() => {
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      await SignInUser({
+        email: formValues.email,
+        password: formValues.password
+      })
+      const refreshPage = () => {
+        window.location.reload()
+      }
+      navigate('/feed')
+    }
+  })
 
   return (
     <div className="sign_in">
@@ -47,7 +54,10 @@ const SignIn = () => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button
+            disabled={!formValues.email || !formValues.password}
+            onClick={refreshPage}
+          >
             Sign In
           </button>
         </form>
