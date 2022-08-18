@@ -1,9 +1,12 @@
-import axios from 'axios'
+import Client from '../services/api'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
+import Nav from '../components/Nav'
+import { Navigate, useNavigate } from 'react-router-dom'
 function RecipeForm() {
+  let navigate = useNavigate()
   const initialState = {
     title: '',
     image: '',
@@ -18,7 +21,7 @@ function RecipeForm() {
   useEffect(() => {
     const getRecipe = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/recipes/all`)
+        let res = await Client.get(`${BASE_URL}/api/recipes/all`)
         console.log(res.data)
 
         setRecipe(res.data)
@@ -35,9 +38,10 @@ function RecipeForm() {
     event.preventDefault()
 
     // console.log(formState)
-    let res = await axios.post(`${BASE_URL}/api/recipes/create`, formState)
+    let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
     setFormState(initialState)
+    navigate('/feed')
   }
 
   return (
