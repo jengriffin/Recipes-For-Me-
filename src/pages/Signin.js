@@ -12,19 +12,18 @@ const SignIn = () => {
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
-  useEffect(() => {
-    const handleSubmit = async (e) => {
-      e.preventDefault()
-      await SignInUser({
-        email: formValues.email,
-        password: formValues.password
-      })
-      const refreshPage = () => {
-        window.location.reload()
-      }
-      navigate('/feed')
-    }
-  })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await SignInUser({
+      email: formValues.email,
+      password: formValues.password
+    })
+    navigate('/feed')
+  }
+  const refreshPage = () => {
+    window.location.reload()
+  }
 
   return (
     <div className="sign_in">
