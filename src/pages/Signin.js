@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
+import '../App.css'
+import '../sideNav.css'
 import { SignInUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
@@ -19,7 +21,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="signin col">
+    <div className="sign_in">
       <div className="card-overlay centered">
         <div>
           <Nav />
