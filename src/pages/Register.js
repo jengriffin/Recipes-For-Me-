@@ -12,7 +12,6 @@ const Register = () => {
     confirmPassword: ''
   }
   const [formValues, setFormValues] = useState({})
-  console.log(formValues)
   let navigate = useNavigate()
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })

@@ -22,8 +22,6 @@ const RecipeForm = ({ user, authenticated }) => {
     const getRecipe = async () => {
       try {
         let res = await Client.get(`${BASE_URL}/api/recipes/all`)
-        console.log(res.data)
-
         setRecipe(res.data)
       } catch (eer) {}
     }
@@ -37,7 +35,6 @@ const RecipeForm = ({ user, authenticated }) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
-    console.log(res)
     setFormState(initialState)
     navigate('/feed')
   }

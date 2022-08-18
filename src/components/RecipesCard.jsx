@@ -41,10 +41,7 @@ const RecipesCard = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // do something with the data in the component state
     let res = await Client.put(`${BASE_URL}/api/recipes/${id}`, formState)
-    console.log(res)
-    // clear the form
     setFormState(initialState)
     alert('You have successfully updated the recipe!')
     navigate('/feed')
