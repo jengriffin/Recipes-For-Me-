@@ -26,7 +26,7 @@ const Recipes = (props) => {
   }, [props.recipe])
 
   return (
-    <div className="form">
+    <div className="list_all">
       <div>
         <SideNav />
       </div>

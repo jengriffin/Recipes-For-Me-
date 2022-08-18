@@ -44,7 +44,7 @@ function RecipeForm({ user, authenticated }) {
   }
 
   return user && authenticated ? (
-    <div className="form">
+    <div className="new_recipe">
       <div>
         <SideNav />
       </div>
