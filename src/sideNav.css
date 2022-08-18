@@ -1,40 +1,76 @@
+.landing {
+  background-color: #003049;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing_link {
+  background-color: transparent;
+  height: 60%;
+  position: fixed;
+  display: block;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_img {
+  background-color: transparent;
+  height: 60%;
+  position: fixed;
+}
+
 .sidenav {
   color: #ffffeb;
   background-color: transparent;
   height: 80%;
   width: 66px;
   position: fixed;
-  z-index: 1;
-  top: 160px;
   right: 0;
-  overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .home {
   background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
   background-position: center;
   background-size:contain
 }
 
 .recipes_list {
   background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
+  background-position: center;
+  background-size:contain
+}
+
+.about {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain
+}
+
+.sign_in {
+  background-image: url("https://gdurl.com/lQzR");
+  background-position: center;
+  background-size:contain
+}
+
+.signin {
+  background-image: url("https://gdurl.com/lQzR");
   background-position: center;
   background-size:contain
 }
 
 .form {
   background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
   background-position: center;
   background-size:contain
 }
 
 .details_page {
   background-image: url("https://gdurl.com/lQzR");
-  /* background-image: url("https://gdurl.com/qd1J"); */
   background-position: center;
   background-size:contain;
   height: 2000px;
@@ -48,13 +84,11 @@
   background-color: #003049;
   margin: 10px;
   border-radius: 0 3px 20px 0 ;
-  /* box-shadow: 3px -2px 6px -2px #2a2a2a; */
   box-shadow: 6px -6px 9px -4px #003049;
 }
 
 .sidenav_links:hover {
   margin: 13px 13px 10px 10px;
-  /* box-shadow: 5px -2px 8px -2px #464646; */
   box-shadow: 8px -6px 10px -8px #003049;
 }
 
@@ -68,7 +102,6 @@
 
 .navbar_container {
   background-color: #003049;
-  /* background-image: url("https://gdurl.com/rSJn"); */
   background-position: center;
   background-size:contain;
   display: flex;
@@ -76,20 +109,18 @@
   justify-content: space-around;
   font-size: 36;
   border-bottom: 3px solid #D95830;
+  margin: 0 0 20px 0;
 }
 
 .nav_links {
   margin-top: 150px;
-  font-size: 20px;
-  
+  font-size: 20px;  
 }
 
 .food {
   width: 66%;
   max-height: 336px;
-  margin: auto;
-  margin-top: 35px;
-  margin-bottom: 35px ;
+  margin: 35px auto 35px auto ;
   display: block;
   object-fit: cover;
   border: 3px solid #003049;
@@ -101,9 +132,7 @@
 .recipe_card {
   width: 66%;
   max-height: 336px;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 35px ;
+  margin: 10px auto 35px auto;
   display: block;
   object-fit: cover;
   border: 3px solid #003049;
@@ -129,7 +158,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: 'League Gothic', sans-serif;
-  margin-bottom: 2px;
+  margin: auto auto 2px auto;
   font-size: 48px;
   background-color: transparent;
 }
@@ -140,9 +169,8 @@
   background-size: 100% 100%;
   width: 66%;
   height: 700px;
+  margin: 2px auto 285px auto;
   text-align: left;
-  margin-top: 2px;
-  margin-left: 17%;
   font-size: 11px;
   background-color: transparent;
 
@@ -168,112 +196,133 @@
   background-color: transparent;
 }
 
-
 .detail {
   font-family: 'Courier Prime', monospace;
   color: #003049;
   background-color: transparent;
-  padding-left: 100px;
-  padding-right: 40px;
+  padding: 0 40px 0 100px
 }
 
-.landing {
-  background-color: #003049;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-
-}
-
-.landing_link {
+.forms_section{
   background-color: transparent;
-  height: 60%;
-  position: fixed;
-  display: block;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  margin: -270px auto 0 auto;
+  height: 636px;
+  width: 550px;
+  border: 3px solid #003049;
+  background-color: #ffffeb;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #2a2a2a;
 }
 
-.hero_img {
-  background-color: transparent;
-  height: 60%;
-  position: fixed;
-  display: block;
-  margin: auto;
-
-}
-
-.form_card {
-  width: auto;
-  height: 700px;
-  text-align: left;
-  margin-left: 17%;
-  font-size: 11px;
-  background-color: transparent;
-}
-.recipe_form {
-  margin-top: -30px;
-  background-color: transparent;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  
-}
-
-label {
-  background-color: transparent;
-  margin-top: 26px;
-  font-family: 'Courier Prime', monospace;
-  font-weight: bold;
+.forms_header {
+  padding-top: 110px;
   color: #003049;
-  margin-left: 15%;
-  font-size: 14px;
+  letter-spacing: 3px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 36px;
+  background-color: transparent;
+  margin-top: -85px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #003049;
 }
 
-input {
+.form_container {
+  align-items: center;
+  display: grid;
+  grid-template-rows: [title] 16.6% [image] 16.6% [ingredients] 16.6% [directions] 16.6% [category] 16.6% [button];
+  justify-content: center;
+  justify-items:flex-end;
+  background-color: transparent;
+  margin: auto;
+}
+
+form {
+  background-color: transparent;
+  margin: -30px auto auto auto;
+}
+
+.input1 {
+  padding: 6px;
+  background-color: transparent;
+}
+
+.input2 {
+  padding: 6px;
+  background-color: transparent;
+}
+
+.input1 label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin: 5px 5px 5px auto;
+}
+
+.input2 label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin-right: 5px;
+}
+
+.input1 input {
+background-color: white;
+height: 24px;
+width: 180px;
+margin: 5px 5px 15px auto;
+}
+
+.input1 textarea {
+background-color: white;
+height: 63px;
+width: 180px;
+margin-right: 5px;
+border: 2px solid black;
+}
+
+.input2 textarea {
   background-color: white;
-  height: 30px ;
+  height: 63px;
+  width: 180px;
+  margin-top: 45px;
+  margin-right: 5px;
+  border: 2px solid black;
+  }
+
+
+.input1 select {
+  background-color: white;
+  height: 24px;
   width: 190px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  white-space: nowrap;
-  margin-top: 15px;
-  margin-left: -110px;
-  margin-right: 50px;
-  cursor: pointer;
+  margin-top: 55px;
+  margin-right: 5px;
+  border: 2px solid black;
 }
 
-select {
-  background-color: white;
-  height: 30px ;
-  width: 190px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  white-space: nowrap;
-  margin-left: -110px;
-  margin-top: 15px;
-  margin-right: 50px;
-  vertical-align: middle;
-  cursor: pointer;
+.button1 {
+  background-color: transparent;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4px;
 }
 
-button {
-  margin-top: 15px;
-  margin-left: 120px;
-  width: 140px;
-  background-color: white;
-  border: 2px solid #003049
-
-}
 .button2 {
-  
+  background-color: transparent;
+  padding-top: 10px;
 }
-.update_button {
+
+.button1 button {
   background-color: white;
-  border: 2px solid #003049
+  font-weight: bold;
+  height: 48px;
+  width: 100px;
+}
+
+.button2 button {
+  background-color: white;
+  font-weight: bold;
+  height: 48px;
+  width: 100px;
 }

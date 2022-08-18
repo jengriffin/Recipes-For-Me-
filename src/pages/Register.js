@@ -3,6 +3,8 @@ import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
+import '../App.css'
+import '../sideNav.css'
 const Register = () => {
   const initialState = {
     name: '',
@@ -24,7 +26,7 @@ const Register = () => {
       password: formValues.password
     })
     setFormValues(initialState)
-    navigate('/signup')
+    navigate('/signin')
   }
   return (
     <div className="signin">
@@ -85,7 +87,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign Up
+            Register
           </button>
         </form>
       </div>

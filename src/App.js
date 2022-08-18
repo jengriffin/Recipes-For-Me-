@@ -13,6 +13,7 @@ import RecipesCard from './components/RecipesCard'
 import SignIn from './pages/Signin'
 import { CheckSession } from './services/Auth'
 import { useState, useEffect } from 'react'
+import Nav from './components/Nav'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -39,6 +40,11 @@ const App = () => {
 
   return (
     <div className="main_app">
+      <Nav
+        authenticated={authenticated}
+        user={user}
+        handleLogOut={handleLogOut}
+      />
       <main>
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -50,7 +56,15 @@ const App = () => {
           <Route path="/" element={<Landing />} />
 
           <Route path="/recipes/:id" element={<RecipesCard />} />
-          <Route path="/signin" element={<SignIn />} />
+          <Route
+            path="/signin"
+            element={
+              <SignIn
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
         </Routes>
       </main>
     </div>

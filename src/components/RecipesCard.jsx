@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import '../sideNav.css'
-import Nav from './Nav'
+
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
   let navigate = useNavigate()
@@ -65,7 +65,7 @@ const RecipesCard = (props) => {
   return (
     <div className="details_page">
       <div>
-        <Nav />
+        
         <SideNav />
       </div>
       <div className='details_grid'>
@@ -79,9 +79,12 @@ const RecipesCard = (props) => {
           {/* <h1 className='details_header2'>Category:</h1> */}
           <h1 className='detail'>{recipe.category}</h1>
         </div>
-        <div className='form_card'>
 
-        <form className='recipe_form' onSubmit={handleSubmit}>
+<div className='forms_section'>
+        <h1 className='forms_header'>Edit this Recipe</h1> 
+        <form onSubmit={handleSubmit}>
+        <div className='form_container'>
+          <div className='input1'>
           <label htmlFor="title">Title:</label>
           <input
             type="text"
@@ -90,6 +93,8 @@ const RecipesCard = (props) => {
             value={formState.title}
             placeholder={recipe.title}
           />
+          </div>
+          <div className='input1'>
           <label htmlFor="image">Image:</label>
           <input
             type="text"
@@ -98,22 +103,28 @@ const RecipesCard = (props) => {
             value={formState.image}
             placeholder={recipe.image}
           />
+          </div>
+          <div className='input1'>
           <label htmlFor="ingredients">Ingredients:</label>
-          <input
+          <textarea
             type="text"
             id="ingredients"
             onChange={handleChange}
             value={formState.ingredients}
             placeholder={recipe.ingredients}
           />
+          </div>
+          <div className='input2'>
           <label htmlFor="directions">Directions:</label>
-          <input
+          <textarea
             type="text"
             id="directions"
             onChange={handleChange}
             value={formState.directions}
             placeholder={recipe.directions}
           />
+          </div>
+          <div className='input1'>
           <label htmlFor="category">Category:</label>
           <select
             id="category"
@@ -130,16 +141,23 @@ const RecipesCard = (props) => {
             <option value="Vegan">Vegan</option>
             <option value="Vegetarian">Vegetarian</option>
           </select>
-            <button className='update_button' type="submit" onClick={refreshPage}>
+          </div>
+          <div className='form_button'>
+          </div>
+            <div className='button1'>
+            <button type="submit" onClick={refreshPage}>
               Update Recipe
             </button>
-
+            </div>
+            </div>
         </form>
 
-        <button onClick={deleteRecipe}>Delete</button>
+        <div className='button2'>
+            <button onClick={deleteRecipe}>Delete Recipe</button>
+          </div>
+          </div>
         </div>
 
-      </div>
     </div>
   )
 }
