@@ -3,9 +3,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import SideNav from '../components/SideNav'
-import Nav from '../components/Nav'
 import { Navigate, useNavigate } from 'react-router-dom'
-function RecipeForm() {
+function RecipeForm({ user, authenticated }) {
   let navigate = useNavigate()
   const initialState = {
     title: '',
@@ -44,7 +43,7 @@ function RecipeForm() {
     navigate('/feed')
   }
 
-  return (
+  return user && authenticated ? (
     <div className="form">
       <div>
         <SideNav />
@@ -98,6 +97,11 @@ function RecipeForm() {
 
         <button type="submit">Submit</button>
       </form>
+    </div>
+  ) : (
+    <div className="protected">
+      <h3>Oops! You must be signed to add a recipe!</h3>
+      <button onClick={() => navigate('/signin')}>Sign In</button>
     </div>
   )
 }

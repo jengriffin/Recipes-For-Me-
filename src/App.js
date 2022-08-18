@@ -51,7 +51,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/feed" element={<Recipes />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/recipeform" element={<RecipeForm />} />
+          <Route
+            path="/recipeform"
+            element={<RecipeForm user={user} authenticated={authenticated} />}
+          />
 
           <Route path="/" element={<Landing />} />
 
