@@ -41,7 +41,6 @@ function RecipeForm() {
     let res = await Client.post(`${BASE_URL}/api/recipes/create`, formState)
     console.log(res)
     setFormState(initialState)
-    alert('Yummy!')
     navigate('/feed')
   }
 
