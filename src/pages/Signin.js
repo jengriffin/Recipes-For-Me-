@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 import '../App.css'
 import '../sideNav.css'
@@ -24,7 +23,6 @@ const SignIn = () => {
     <div className="sign_in">
       <div className="card-overlay centered">
         <div>
-          <Nav />
           <SideNav />
         </div>
         <form className="col" onSubmit={handleSubmit}>

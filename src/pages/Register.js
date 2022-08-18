@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 import '../App.css'
 import '../sideNav.css'
@@ -32,7 +31,6 @@ const Register = () => {
     <div className="signin">
       <div className="card-overlay centered">
         <div>
-          <Nav />
           <SideNav />
         </div>
         <form className="col" onSubmit={handleSubmit}>
