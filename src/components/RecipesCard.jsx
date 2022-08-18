@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import '../sideNav.css'
-import Client from '..services/api'
+import Client from '../services/api'
 
 import SideNav from './SideNav'
 const RecipesCard = (props) => {
