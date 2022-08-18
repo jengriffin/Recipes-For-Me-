@@ -2,7 +2,6 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
-import Nav from '../components/Nav'
 import SideNav from '../components/SideNav'
 function RecipeForm() {
   const initialState = {
@@ -44,7 +43,6 @@ function RecipeForm() {
   return (
     <div className="form">
       <div>
-        <Nav />
         <SideNav />
       </div>
       <h1 className="recipe_title">Add A New Recipe</h1>
