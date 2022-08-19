@@ -17,7 +17,7 @@ const Nav =({ authenticated, user, handleLogOut })=>{
     const publicOptions = (
         <div className='pub_opts'>
             <span><NavLink className='nav_links' to='/signin'>Sign In</NavLink></span>
-           <span><NavLink className='nav_links' to='/register'>Register</NavLink></span>
+        <span><NavLink className='nav_links' to='/register'>Register</NavLink></span>
             
         </div>
     )

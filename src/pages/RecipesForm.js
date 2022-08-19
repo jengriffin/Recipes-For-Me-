@@ -117,7 +117,7 @@ const RecipeForm = ({ user, authenticated }) => {
     </div>
   ) : (
     <div className="new_recipe">
-      <h3>Oops! You must be signed to add a recipe!</h3>
+      <h3>Oops! You must be signed in to add a recipe!</h3>
       <button onClick={() => navigate('/signin')}>Sign In</button>
     </div>
   )
