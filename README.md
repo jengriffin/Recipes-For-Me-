@@ -57,6 +57,16 @@
 
 Fork and Clone
 npm i
+npm start
+
+---
+
+## **_Future Improvements_**
+
+Mobile App
+Save Private Recipes
+Search component
+Animated Category Drop-Down
 
 ---
 
