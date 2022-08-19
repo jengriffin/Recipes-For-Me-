@@ -11,15 +11,12 @@ const Recipes = (props) => {
   const [recipe, setRecipe] = useState('')
 
   const showRecipes = (recipe) => {
-    console.log(recipe.id)
     navigate(`/recipes/${recipe.id}`)
   }
 
   useEffect(() => {
     const getRecipes = async () => {
-      console.log('get recipes')
       let res = await axios.get(`${BASE_URL}/api/recipes/all`)
-      console.log(res.data)
       setRecipe(res.data)
     }
     getRecipes()

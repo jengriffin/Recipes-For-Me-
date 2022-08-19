@@ -26,10 +26,8 @@ const RecipesCard = (props) => {
     const selectedRecipe = async () => {
       try {
         let res = await Client.get(`${BASE_URL}/api/recipes/view/${id}`)
-        console.log(res.data)
         setRecipe(res.data)
       } catch (eer) {
-        console.log(eer)
       }
     }
     setRecipe(selectedRecipe)
