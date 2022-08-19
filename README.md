@@ -8,7 +8,7 @@
 
 ## **_Links:_**
 
-## Link to Recipe-For-Me: [Recipe-For-Me]()
+## Link to Recipe-For-Me: [Recipe-For-Me](https://obscure-reef-40887.herokuapp.com/home)[Back-end-server](https://recipes-for-me-api.herokuapp.com/)
 
 [Trello Progress](https://trello.com/b/DfpSJLep/recipes-for-me) | [GitHub](https://github.com/Aonmonomer/Recipe-For-Me-Backend) |[GitHub](https://github.com/jengriffin/Recipes-For-Me-)
 
@@ -17,6 +17,22 @@
 ## **_Description_**
 
 ### A recipe website tailor made for all dietary needs and healthy choices! Users can browse the webpages for various recipes and login to add their own recipe to the collections online. Users can also subsequently update and delete their posted recipes.
+
+---
+
+## **_Screenshots_**
+
+![Feed Page](assets/FeedPage.png)
+
+![Add a Recipe](./assets/Screen%20Shot%202022-08-19%20at%208.16.14%20AM.png)
+
+![Recipe Details/Edit form](./assets/Screen%20Shot%202022-08-19%20at%208.47.25%20AM.png)
+
+![Edit/Delete Form](./assets/Screen%20Shot%202022-08-19%20at%208.17.11%20AM.png)
+
+![Create a User Form](./assets/Screen%20Shot%202022-08-19%20at%208.17.52%20AM.png)
+
+![Logo](assets/logoreadme.png)
 
 ---
 
@@ -41,6 +57,16 @@
 
 Fork and Clone
 npm i
+npm start
+
+---
+
+## **_Future Improvements_**
+
+Mobile App
+Save Private Recipes
+Search component
+Animated Category Drop-Down
 
 ---
 
@@ -59,3 +85,15 @@ npm i
 ## Website deployment: [heroku.com](https://dashboard.heroku.com)
 
 ## Image resources: [google.com](https://www.google.com/)
+
+## Refresh Page [upmostly.com](https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react)
+
+## Styling [css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+## Back to Top[css-tricks.com](https://css-tricks.com/need-to-scroll-to-the-top-of-the-page/#:~:text=You%20might%20need%20to%20trigger,element)%20back%20to%20the%20top)
+
+## Logo Design[canva.com](https://www.canva.com/)
+
+## Color Scheme [coolors.com](https://coolors.co/)
+
+## Sequlize Migrations on Heroku[stack overflow](https://stackoverflow.com/questions/22633618/sequelize-migrations-in-heroku)

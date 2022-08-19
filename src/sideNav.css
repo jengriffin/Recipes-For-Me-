@@ -9,18 +9,18 @@
 
 .landing_link {
   background-color: transparent;
-  height: 60%;
+  height: 80%;
   position: fixed;
   display: block;
-  margin: auto;
+  margin: auto auto 130px auto;
   display: flex;
   justify-content: center;
 }
 
 .hero_img {
   background-color: transparent;
-  height: 60%;
-  position: fixed;
+  height: 90%;
+  position: relative;
 }
 
 .sidenav {
@@ -45,6 +45,7 @@
   background-position: center;
   background-size:contain;
   height: 1200px;
+  padding-top: 15px;
 }
 
 .register {
@@ -52,6 +53,7 @@
   background-position: center;
   background-size:contain;
   height: 1200px;
+  padding-top: 15px;
 }
 
 .recipes_list {
@@ -71,6 +73,7 @@
   background-position: center;
   background-size:contain;
   height: 1200px;
+  padding-top: 15px;
 }
 
 .about {
@@ -116,15 +119,36 @@
   background-size:contain;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  font-size: 36;
+  justify-content: center;
   border-bottom: 3px solid #D95830;
 }
 
 .pub_opts {
   background-color: #003049;
-  margin-top: 150px;
-  font-size: 20px; 
+  margin-top: 150px; 
+}
+
+.pub_opts2 {
+  background-color: #003049;
+  margin-top: 150px; 
+}
+
+.pub_opts span a {
+  font-size: 18px;
+}
+
+.pub_opts2 span a {
+  font-size: 18px;
+}
+
+.pub_opts span {
+  padding-left: 25px;
+  background-color: transparent;
+}
+
+.pub_opts2 span {
+  padding-right: 25px;
+  background-color: transparent;
 }
 
 .nav_links {
@@ -248,7 +272,24 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 35px;
-  height: 306px;
+  height: 406px;
+  width: 550px;
+  border: 3px solid #003049;
+  background-color: #ffffeb;
+  border-radius: 15px;
+  box-shadow: 6px 0 15px #2a2a2a;
+}
+
+.buffer {
+  margin-bottom: 10px;
+}
+
+.forms_section_new_recipe{
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+  height: 496px;
   width: 550px;
   border: 3px solid #003049;
   background-color: #ffffeb;
@@ -281,6 +322,18 @@
   border-bottom: 3px solid #003049;
 }
 
+.forms_header_update {
+  color: #003049;
+  letter-spacing: 3px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 36px;
+  background-color: transparent;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-bottom: 3px solid #003049;
+}
+
 .form_container {
   align-items: center;
   display: grid;
@@ -294,7 +347,19 @@
 .form_container_sign_in {
   align-items: center;
   display: grid;
-  grid-template-rows: [title] 16.6% [image] 16.6% [ingredients] 16.6% [directions] 16.6% [category] 16.6% [button];
+  grid-template-rows: 33% 33% 33%;
+  justify-content: center;
+  justify-items:flex-end;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+.form_container_register {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   justify-content: center;
   justify-items:flex-end;
   background-color: transparent;
@@ -303,6 +368,21 @@
   margin-top: 15px;
   padding-top: 40px;
 }
+
+.input1_register label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin: 5px 5px 5px auto;
+}
+
+.input1_register input {
+  background-color: white;
+  height: 24px;
+  width: 180px;
+  margin: 50px auto 15px auto;
+  }
 
 form {
   background-color: transparent;
@@ -317,6 +397,26 @@ form {
 .input1_sign_in {
   padding: 6px;
   background-color: transparent;
+}
+
+.new_email {
+  padding: 6px;
+  background-color: transparent;
+}
+
+.new_email label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffffeb;
+  margin: 5px 5px 5px auto;
+}
+
+.new_email input {
+  background-color: white;
+  height: 24px;
+  width: 180px;
+  margin: 50px auto 15px auto;
 }
 
 .input1_sign_in label {
@@ -379,6 +479,14 @@ border: 2px solid black;
   border: 2px solid black;
   }
 
+  .input1_sign_in textarea {
+    background-color: white;
+    height: 63px;
+    width: 180px;
+    margin-right: 5px;
+    border: 2px solid black;
+    }
+
 
 .input1 select {
   background-color: white;
@@ -395,6 +503,8 @@ border: 2px solid black;
   margin-left: auto;
   margin-top: 4px;
 }
+
+
 
 .button_sign_in {
   background-color: transparent;

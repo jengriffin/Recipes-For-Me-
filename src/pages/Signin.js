@@ -12,6 +12,9 @@ const SignIn = () => {
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
+  const refreshPage = () => {
+    window.location.reload()
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -20,11 +23,12 @@ const SignIn = () => {
       password: formValues.password
     })
     navigate('/feed')
+    refreshPage()
   }
 
   return (
     <div className="sign_in">
-      <div>
+      <div className="buffer">
         <SideNav />
       </div>
 
@@ -32,7 +36,7 @@ const SignIn = () => {
         <h1 className="forms_header">Please Sign In</h1>
         <form onSubmit={handleSubmit}>
           <div className="form_container_sign_in">
-            <div className="input1_sign_in">
+            <div className="new_email">
               <label htmlFor="email">Email: </label>
               <input
                 onChange={handleChange}
