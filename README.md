@@ -22,15 +22,15 @@
 
 ## **_Screenshots_**
 
-## ![Feed Page](assets/Screen Shot 2022-08-19 at 8.15.54 AM.png)
+## ![Feed Page](./assets/Screen Shot 2022-08-19 at 8.15.54 AM.png)
 
-## ![Add a Recipe] (assets/Screen Shot 2022-08-19 at 8.16.14 AM.png)
+## ![Add a Recipe] (./assets/Screen Shot 2022-08-19 at 8.16.14 AM.png)
 
-## ![Recipe Details/Edit form](assets/Screen Shot 2022-08-19 at 8.17.00 AM.png)
+## ![Recipe Details/Edit form](./assets/Screen Shot 2022-08-19 at 8.17.00 AM.png)
 
-## ![Edit/Delete Form](assets/Screen Shot 2022-08-19 at 8.17.11 AM.png)
+## ![Edit/Delete Form](./assets/Screen Shot 2022-08-19 at 8.17.11 AM.png)
 
-## ![Create a User Form](assets/Screen Shot 2022-08-19 at 8.17.52 AM.png)
+## ![Create a User Form](./assets/Screen Shot 2022-08-19 at 8.17.52 AM.png)
 
 ## ![Logo](assets/logoreadme.png)
 
