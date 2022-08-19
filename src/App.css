@@ -14,6 +14,20 @@ a:visited {
   color:#ffffeb;
   text-decoration: none;
 }
+ul{
+  background-color: transparent;
+  width: 200px;
+}
+a:visited.banks {
+  color:#003049;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+}
+h2{
+  background-color: transparent;
+}
+
 .navbar {
   background-color: #003049;
   display: flex;
@@ -27,4 +41,15 @@ a:visited {
   width: 180px;
   background-color:#003049 ;
   border-radius: 100%;
+}
+footer{
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  margin: 30px 0 0 -10px;
+  min-height: 5%;
+  font-size: 18px;
+  padding-left: 20px;
 }

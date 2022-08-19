@@ -79,7 +79,8 @@
 .about {
   background-image: url("https://gdurl.com/lQzR");
   background-position: center;
-  background-size:contain
+  background-size:contain;
+  height: 1200px;
 }
 
 .details_page {
@@ -249,11 +250,17 @@
   background-color: transparent;
 }
 
-.detail {
+.detail, ul {
+  text-decoration: none;
   font-family: 'Courier Prime', monospace;
   color: #003049;
   background-color: transparent;
   padding: 0 40px 0 100px
+}
+.banks {
+  background-color: transparent;
+  color: #003049;
+  font-weight: bold;
 }
 
 .forms_section{
