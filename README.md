@@ -1,3 +1,5 @@
+![logo](./assets/logoreadme.png)
+
 # Recipes-For-Me
 
 # Date: 8/10/2022
@@ -8,7 +10,9 @@
 
 ## **_Links:_**
 
-## Link to Recipe-For-Me: [Recipe-For-Me](https://obscure-reef-40887.herokuapp.com/home)[Back-end-server](https://recipes-for-me-api.herokuapp.com/)
+## Link to Recipe-For-Me:
+
+[Recipe-For-Me](https://obscure-reef-40887.herokuapp.com/home)[Back-end-server](https://recipes-for-me-api.herokuapp.com/)
 
 [Trello Progress](https://trello.com/b/DfpSJLep/recipes-for-me) | [GitHub](https://github.com/Aonmonomer/Recipe-For-Me-Backend) |[GitHub](https://github.com/jengriffin/Recipes-For-Me-)
 
@@ -28,11 +32,7 @@
 
 ![Recipe Details/Edit form](./assets/Screen%20Shot%202022-08-19%20at%208.47.25%20AM.png)
 
-![Edit/Delete Form](./assets/Screen%20Shot%202022-08-19%20at%208.17.11%20AM.png)
-
 ![Create a User Form](./assets/Screen%20Shot%202022-08-19%20at%208.17.52%20AM.png)
-
-![Logo](assets/logoreadme.png)
 
 ---
 
@@ -67,6 +67,16 @@ Mobile App
 Save Private Recipes
 Search component
 Animated Category Drop-Down
+Search Recipes by Multiple Categories
+Random Recipe Picker
+Shopping List Creation
+User added Categories
+Print and Share opitons
+Links to Food Pantries
+"Double Protect" Users can only edit and/or delete their own recipes
+Front-End Admin Access
+Category Explanations
+Save Recipe Button
 
 ---
 

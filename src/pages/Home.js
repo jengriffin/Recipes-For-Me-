@@ -9,7 +9,7 @@ const Home = () => {
         <SideNav />
       </div>
       <div className="recipe_grid">
-        <h1 className="home_title">Lets Type things here! </h1>
+        <h1 className="home_title">Indulge Your Cravings! </h1>
         <img className="food" src="https://gdurl.com/7eIn" alt="yummy pic" />
       </div>
     </div>
