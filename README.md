@@ -26,7 +26,7 @@
 
 ![Add a Recipe](./assets/Screen%20Shot%202022-08-19%20at%208.16.14%20AM.png)
 
-![Recipe Details/Edit form](./assets/Screen%20Shot%202022-08-19%20at%208.17.00%20AM.png)
+![Recipe Details/Edit form](./assets/Screen%20Shot%202022-08-19%20at%208.47.25%20AM.png)
 
 ![Edit/Delete Form](./assets/Screen%20Shot%202022-08-19%20at%208.17.11%20AM.png)
 
