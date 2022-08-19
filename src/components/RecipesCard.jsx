@@ -75,7 +75,7 @@ const RecipesCard = (props) => {
         </div>
 
         <div className='forms_section'>
-         <h1 className='forms_header'>Edit this Recipe</h1> 
+         <h1 className='forms_header_update'>Edit this Recipe</h1> 
         <form onSubmit={handleSubmit}>
         <div className='form_container'>
 
